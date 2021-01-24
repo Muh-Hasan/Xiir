@@ -1,6 +1,8 @@
 import React from "react"
 import Header from "../components/Header"
+import Accordion from "../components/Accordion/Accordion"
 import Img from "../images/3.jpg"
+
 export default function Home() {
   return (
     <div>
@@ -8,10 +10,10 @@ export default function Home() {
       <section className="banner-section d-flex">
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 img-col">
+            <div className="col-sm-12 col-md-6 col-lg-6 img-col">
               <img src={Img} alt="nothing" className="img" />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-col">
+            <div className="col-sm-12 col-md-5 col-lg-5 text-col">
               <h3>
                 Senior managers spend way too much time ensuring compliance
               </h3>
@@ -43,6 +45,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <section className="atelier-option2 change-header">
         <div className="container">
           <div className="row align-items-center justify-content-between">
@@ -70,22 +73,55 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <section className="d-flex">
         <div className="container d-flex flex-column">
-          <div className="row align-items-center justify-content-between content-area"> 
-            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-col">
+          <div className="row align-items-center justify-content-between content-area">
+            <div className="col-sm-12 col-md-5 col-lg-5 text-col">
               <h1>simplify compliance oversight</h1>
               <br />
               <h3>
-                at the heart of xiir is the understanding that managing compliance is one of the many things senior mangers do
+                at the heart of xiir is the understanding that managing
+                compliance is one of the many things senior mangers do
               </h3>
-              <h3>
-                and that's why it needs to be made easy for them
-              </h3>
+              <h3>and that's why it needs to be made easy for them</h3>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 img-col">
+            <div className="col-sm-12 col-md-6 col-lg-6 img-col">
               <img src={Img} alt="nothing" className="img" />
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className='d-flex'>
+        <div className='container align-items-center text-center'>
+          <div>
+            <Accordion
+              title="What is your return policy?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="Can I purchase items again?"
+              content="
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        "
+            />
+
+          </div>
+          <div className='btn-accod-div'>
+            <button className='btn-hello'>
+              <span>
+                explore more
+              </span>
+            </button>
           </div>
         </div>
       </section>
