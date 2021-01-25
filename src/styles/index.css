@@ -135,3 +135,44 @@
     font-size: 20px;
     font-weight: 400;
 }
+
+
+/* xiir benefit section */
+.xiir-benefits{
+    margin-top: 60px;
+}
+.xiir-benefits .div-para{
+    margin-bottom: 20px;
+}
+.xiir-benefits .div-head h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.xiir-benefits .div-para h4{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+.info-boxes{
+    margin-top: 20px;
+}
+.info-boxes-div{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.info-boxes-div div{
+    max-width: 300px;
+    text-align: center;
+    
+}
+.info-boxes-div img{
+    height: 60px;
+    margin-bottom: 5px;
+}
+.info-boxes-div p{
+    color: #757575;
+    font-weight: 500;
+}

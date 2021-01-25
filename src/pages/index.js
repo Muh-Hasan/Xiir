@@ -1,7 +1,12 @@
 import React from "react"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
+
+// Iamges
 import Img from "../images/3.jpg"
+import Analytics from "../images/analytics.png"
+import Case from "../images/case.png"
+import Like from "../images/like.png"
 
 export default function Home() {
   return (
@@ -45,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       <section className="atelier-option2 change-header">
         <div className="container">
           <div className="row align-items-center justify-content-between">
@@ -73,7 +78,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       <section className="d-flex">
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
@@ -92,9 +97,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      <section className='d-flex'>
-        <div className='container align-items-center text-center'>
+
+      <section className="d-flex">
+        <div className="container align-items-center text-center">
           <div>
             <Accordion
               title="What is your return policy?"
@@ -114,14 +119,92 @@ export default function Home() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         "
             />
-
           </div>
-          <div className='btn-accod-div'>
-            <button className='btn-hello'>
-              <span>
-                explore more
-              </span>
+          <div className="btn-accod-div">
+            <button className="btn-hello">
+              <span>explore more</span>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="xiir-benefits">
+        <div className="container">
+          <div className="div-head">
+            <h1>How Xiir Benefits You</h1>
+          </div>
+          <div className="div-para">
+            <h4>
+              Customised compliance frameworks across the business delivering
+              your oversight easier, faster and more reliable with better
+              accountability, transparency and outcomes.
+            </h4>
+          </div>
+        </div>
+      </section>
+
+      <section className="info-boxes">
+        <div className="container">
+          <div className="d-flex info-boxes-div">
+            <div>
+              <img src={Case} alt="Case" />
+              <h4>Real-time Visibility</h4>
+              <p>Simplify control for all your compliance oversight</p>
+            </div>
+            <div>
+              <img src={Analytics} alt="Analytics" />
+              <h4>Supercharge Governance</h4>
+              <p>Communicate to the right people at the right time</p>
+            </div>
+            <div>
+              <img src={Like} alt="Like" />
+              <h4>Informed Decision-making</h4>
+              <p> Bring all relevant insights to your fingertips</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="d-flex">
+        <div className="container align-items-center text-center">
+          <div>
+            <h1>FAQ</h1>
+          </div>
+          <div>
+            <Accordion
+              title="What is your return policy?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="How do I track my order?"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+              title="Can I purchase items again?"
+              content="
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        "
+            />
           </div>
         </div>
       </section>
