@@ -212,7 +212,6 @@ export default function Home() {
       <section className='download-box'>
         <div className='container'>
           <div className='box'>
-            <div></div>
           </div>
         </div>
       </section>
