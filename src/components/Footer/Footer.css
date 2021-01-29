@@ -9,6 +9,20 @@
 .footer-section .col-tagline {
   max-width: 180px;
 }
+.footer-section .col-tagline h1{
+    color: #243671;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.footer-section .col-tagline h2{
+    color: #243671;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.footer-section .col-tagline h5{
+    color: #b61e77;
+    font-weight: 500;
+}
 .footer-section .footer-menu {
   max-width: 250px;
 }
@@ -22,6 +36,9 @@
 .foot-menu > li {
   list-style: none;
   margin-bottom: 5px;
+}
+.footer-menu h2{
+    color: #243671;
 }
 
 .foot-menu .btn {
@@ -50,6 +67,9 @@
 .footer-section .footer-form {
   max-width: 300px;
   flex: 0 0 40%;
+}
+.footer-form h2{
+    color: #243671;
 }
 .footer-form input {
   border-radius: 22px;
@@ -113,4 +133,24 @@
 .footer-section .footer-bottom .social-media li img {
   width: 25px;
   height: 25px;
+}
+
+@media (max-width: 767px) {
+  .footer-section .col-tagline {
+    max-width: 100%;
+    width: 100%;
+    flex: 100%;
+    margin-bottom: 40px;
+  }
+  .footer-section .footer-menu {
+    max-width: 100%;
+    width: 100%;
+    flex: 100%;
+    margin-bottom: 40px;
+  }
+  .footer-section .footer-form {
+    max-width: 100%;
+    width: 100%;
+    flex: 100%;
+  }
 }

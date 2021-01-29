@@ -12,12 +12,12 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="row justify-content-between ">
-            <div className="col-sm-12 col-md-3 col-lg-4 col-tagline">
-              <h2>xiir</h2>
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 col-tagline">
+              <h1>xiir</h1>
               <h2>smart compliance oversight </h2>
               <h5>sales@xiir.com</h5>
             </div>
-            <div className="col-sm-12 col-md-3 col-lg-4 footer-menu">
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 footer-menu">
               <h2>Menu</h2>
               <ul className="foot-menu">
                 <li>
@@ -40,7 +40,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-sm-12 col-md-3 col-lg-4 footer-form">
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 footer-form">
               <h2>For updates on interesting stuff.</h2>
               <div className="footer-subscribe-form">
                 <div>
