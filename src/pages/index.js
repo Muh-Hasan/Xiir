@@ -209,9 +209,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='download-box'>
-        <div className='container'>
-          <div className='box'>
+      <section className="download-box">
+        <div className="container">
+          <div className="box">
+            <h2>download the xiir datesheet</h2>
+            <div>
+              <div>
+                <input placeholder="please enter a valid business email" />
+              </div>
+              <div>
+                <button>download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div>
+            <h2>our youtube channel has more videos</h2>
+          </div>
+          <div>
+            <iframe
+              src="https://www.youtube.com/watch?v=QvfQd8NkzMk"
+              title="W3Schools Free Online Web Tutorials"
+            ></iframe>
           </div>
         </div>
       </section>
