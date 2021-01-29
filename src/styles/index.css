@@ -45,19 +45,6 @@
   padding-top: 206px;
 }
 
-.d-flex {
-  display: flex !important;
-}
-
-.flex-column {
-    flex-direction: column!important;
-}
-.align-items-center {
-    align-items: center!important;
-}
-.justify-content-between {
-    justify-content: space-between!important;
-}
 .img{
     max-width: 550px;
     width: 100%;
@@ -175,4 +162,13 @@
 .info-boxes-div p{
     color: #757575;
     font-weight: 500;
+}
+
+
+
+@media (max-width: 767px){
+.banner-section {
+    padding-bottom: 65px;
+    padding-top: 60px;
+}
 }
