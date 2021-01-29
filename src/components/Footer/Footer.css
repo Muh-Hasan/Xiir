@@ -1,0 +1,116 @@
+.footer-section {
+  background-color: #f8f8f8;
+  padding-top: 40px;
+}
+.footer-section .footer-top {
+  border-bottom: 1px solid #0069f1;
+  padding-bottom: 31px;
+}
+.footer-section .col-tagline {
+  max-width: 180px;
+}
+.footer-section .footer-menu {
+  max-width: 250px;
+}
+.foot-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.foot-menu > li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.foot-menu .btn {
+  border: 2px solid #0069f1;
+  color: #0069f1;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: 22px;
+  padding: 7px 15px;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  padding-left: 21px;
+  min-width: 160px;
+  text-transform: uppercase;
+  transition: all 0.2s, 0.3s ease-in-out;
+  display: inline-block;
+  line-height: 20px;
+}
+.foot-menu .btn:hover {
+  background-color: #0069f1;
+  color: #fff;
+  cursor: pointer;
+}
+.footer-section .footer-form {
+  max-width: 300px;
+  flex: 0 0 40%;
+}
+.footer-form input {
+  border-radius: 22px;
+  background-color: transparent;
+  height: 40px;
+  font-size: 14px;
+  border: 2px solid #0069f1;
+  letter-spacing: 0.31px;
+  padding: 7px 25px 9px;
+  margin-bottom: 5px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #0069f1;
+}
+.footer-form button {
+  border: 2px solid #0069f1;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: 22px;
+  padding: 8px 15px;
+  padding-left: 21px;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  min-width: 160px;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: all 0.2s, 0.3s ease-in-out;
+  color: #fff;
+  background-color: #0069f1;
+  text-align: left;
+  line-height: 1;
+  font-weight: 600;
+}
+.footer-form button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #0069f1;
+}
+.footer-section .footer-bottom {
+  padding: 13px 0 20px;
+}
+.footer-section .footer-bottom .social-media {
+  width: 85px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+}
+.footer-section .footer-bottom p {
+  color: #243671;
+  font-weight: 500;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.7px;
+}
+
+.footer-section .footer-bottom .social-media li img {
+  width: 25px;
+  height: 25px;
+}

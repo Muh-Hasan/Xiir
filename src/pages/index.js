@@ -1,7 +1,8 @@
 import React from "react"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
-
+// import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer/Footer'
 // Iamges
 import Img from "../images/3.jpg"
 import Analytics from "../images/analytics.png"
@@ -238,6 +239,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }
