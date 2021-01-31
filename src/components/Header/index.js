@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useRef } from "react"
 import Logo from "../../images/xiir.png"
 import styles from "./index.module.css"
 const Header = () => {
+  const menu = useRef(null)
   return (
+    <>
     <header className={styles.siteHeader}>
       <div className="container">
         <div className="row">
@@ -20,6 +22,8 @@ const Header = () => {
         </div>
       </div>
     </header>
+    <div></div>
+    </>
   )
 }
 
