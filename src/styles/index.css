@@ -5,13 +5,12 @@
   font-family: 'Montserrat', sans-serif;
   outline: none !important;
 }
-
-.btn-hello{
-    border: 2px solid #52b9d3;
+.btn{
+    border: 2px solid #52b9d3 !important;
     font-size: 15px;
     letter-spacing: 0.31px;
     height: 40px;
-    border-radius: 22px;
+    border-radius: 22px !important;
     padding: 8px 15px;
     padding-left: 21px;
     min-width: 160px;
@@ -23,8 +22,9 @@
     padding-bottom: 9px;
     padding-top: 7px;
     outline: none;
-    cursor: pointer;    
+    cursor: pointer;
 }
+
 .btn-accod-div{
     margin-top: 40px;
     margin-bottom: 20px;
@@ -65,25 +65,7 @@
 .text-col .btn-div{
     margin-top: 65px;
 }
-.text-col .btn{
-    border: 2px solid #52b9d3;
-    font-size: 15px;
-    letter-spacing: 0.31px;
-    height: 40px;
-    border-radius: 22px;
-    padding: 8px 15px;
-    padding-left: 21px;
-    min-width: 160px;
-    text-transform: uppercase;
-    background-color: #fff;
-    display: inline-block;
-    color: #52b9d3;
-    text-align: left;
-    padding-bottom: 9px;
-    padding-top: 7px;
-    outline: none;
-    cursor: pointer;
-}
+
 
 
 .atelier-options {

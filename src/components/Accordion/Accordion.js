@@ -6,17 +6,14 @@ import "./Accordion.css"
 function Accordion(props) {
   const [setActive, setActiveState] = useState("")
   const [setHeight, setHeightState] = useState("0px")
-  const [setRotate, setRotateState] = useState("accordion__icon")
-
+  const [showMinus , setShowMinus] = useState(false)
   const content = useRef(null)
 
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "")
+    setShowMinus(!showMinus)
     setHeightState(
       setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
-    )
-    setRotateState(
-      setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
     )
   }
 
@@ -24,7 +21,7 @@ function Accordion(props) {
     <div className="accordion__section">
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
         <p className="accordion__title">{props.title}</p>
-        <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
+        <p className='accordion__icon'>{showMinus ? "-" : "+"}</p>
       </button>
       <div
         ref={content}

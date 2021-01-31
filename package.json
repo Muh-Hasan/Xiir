@@ -18,7 +18,8 @@
     "gsap": "^3.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-player": "^2.8.2"
+    "react-player": "^2.8.2",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "prettier": "2.2.1"
