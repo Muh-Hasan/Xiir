@@ -6,7 +6,7 @@ import "./Accordion.css"
 function Accordion(props) {
   const [setActive, setActiveState] = useState("")
   const [setHeight, setHeightState] = useState("0px")
-  const [showMinus , setShowMinus] = useState(false)
+  const [showMinus, setShowMinus] = useState(false)
   const content = useRef(null)
 
   function toggleAccordion() {
@@ -19,22 +19,24 @@ function Accordion(props) {
 
   return (
     <div className="accordion__section">
-      <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-        <p className="accordion__title">{props.title}</p>
-        <p className='accordion__icon'>{showMinus ? "-" : "+"}</p>
-      </button>
-      <div
-        ref={content}
-        style={{ maxHeight: `${setHeight}` }}
-        className="accordion__content"
-      >
+      <div className='accordion'>
+        <button  onClick={toggleAccordion}>
+          <p className="accordion__title">{props.title}</p>
+          <p className="accordion__icon">{showMinus ? "-" : "+"}</p>
+        </button>
         <div
-          className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: props.content }}
-        />
+          ref={content}
+          style={{ maxHeight: `${setHeight}` }}
+          className="accordion__content"
+        >
+          <div
+            className="accordion__text"
+            dangerouslySetInnerHTML={{ __html: props.content }}
+          />
+        </div>
       </div>
     </div>
   )
 }
-
+// className={`accordion ${setActive}`}
 export default Accordion

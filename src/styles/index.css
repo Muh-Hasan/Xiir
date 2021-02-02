@@ -1,33 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   outline: none !important;
 }
-.btn{
-    border: 2px solid #52b9d3 !important;
-    font-size: 15px;
-    letter-spacing: 0.31px;
-    height: 40px;
-    border-radius: 22px !important;
-    padding: 8px 15px;
-    padding-left: 21px;
-    min-width: 160px;
-    text-transform: uppercase;
-    background-color: #fff;
-    display: inline-block;
-    color: #52b9d3;
-    text-align: left;
-    padding-bottom: 9px;
-    padding-top: 7px;
-    outline: none;
-    cursor: pointer;
+.btn {
+  border: 2px solid #52b9d3 !important;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: 22px !important;
+  padding: 8px 15px;
+  padding-left: 21px;
+  min-width: 160px;
+  text-transform: uppercase;
+  background-color: #fff;
+  display: inline-block;
+  color: #52b9d3;
+  text-align: left;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s, 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #52b9d3;
+  color: #fff;
+  cursor: pointer;
 }
 
-.btn-accod-div{
-    margin-top: 40px;
-    margin-bottom: 20px;
+.btn-accod-div {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .text-center {
   text-align: center !important;
@@ -45,112 +51,110 @@
   padding-top: 206px;
 }
 
-.img{
-    max-width: 550px;
-    width: 100%;
-    padding: 0% 0 0 12%;
+.img {
+  max-width: 550px;
+  width: 100%;
+  padding: 0% 0 0 12%;
 }
 .text-col h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 22px;
-    text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 22px;
+  text-transform: capitalize;
 }
-.text-col h1{
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: capitalize;
-    line-height: 1.1;
+.text-col h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.1;
 }
-.text-col .btn-div{
-    margin-top: 65px;
+.text-col .btn-div {
+  margin-top: 65px;
 }
-
-
 
 .atelier-options {
-    padding: 70px 0;
-    padding-top: 78px;
-    color: #fff;
-    overflow: hidden;
+  padding: 70px 0;
+  padding-top: 78px;
+  color: #fff;
+  overflow: hidden;
 }
 .tr-bg {
-    background-color: #52b9d3;
+  background-color: #52b9d3;
 }
-.content-lines{
-    flex: 1 !important;
+.content-lines {
+  flex: 1 !important;
 }
-.content-lines h3{
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 1.2;
+.content-lines h3 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2;
 }
-.atelier-option2{
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    padding-top: 78px;
-    overflow: hidden;
+.atelier-option2 {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  padding-top: 78px;
+  overflow: hidden;
 }
-.content-lines .h1-one{
-    font-size: 25px;
-    text-transform: capitalize;
+.content-lines .h1-one {
+  font-size: 25px;
+  text-transform: capitalize;
 }
-.content-lines .h1-two{
-    font-size: 35px;
-    font-weight: 600;
-    text-transform: capitalize;
+.content-lines .h1-two {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
-.content-lines .h3-one{
-    font-size: 20px;
-    font-weight: 400;
+.content-lines .h3-one {
+  font-size: 20px;
+  font-weight: 400;
 }
-
 
 /* xiir benefit section */
-.xiir-benefits{
-    margin-top: 60px;
+.xiir-benefits {
+  margin-top: 60px;
 }
-.xiir-benefits .div-para{
-    margin-bottom: 20px;
+.xiir-benefits .div-para {
+  margin-bottom: 20px;
 }
-.xiir-benefits .div-head h1{
-    font-size: 32px;
-    font-weight: 600;
+.xiir-benefits .div-head h1 {
+  font-size: 32px;
+  font-weight: 600;
 }
-.xiir-benefits .div-para h4{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-
-.info-boxes{
-    margin-top: 20px;
-}
-.info-boxes-div{
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-.info-boxes-div div{
-    max-width: 300px;
-    text-align: center;
-    
-}
-.info-boxes-div img{
-    height: 60px;
-    margin-bottom: 5px;
-}
-.info-boxes-div p{
-    color: #757575;
-    font-weight: 500;
+.xiir-benefits .div-para h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
+.info-boxes {
+  margin-top: 20px;
+}
+.info-boxes-div {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.info-boxes-div div {
+  max-width: 300px;
+  text-align: center;
+}
+.info-boxes-div img {
+  height: 60px;
+  margin-bottom: 5px;
+}
+.info-boxes-div p {
+  color: #757575;
+  font-weight: 500;
+}
 
+.section-padding {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 
-@media (max-width: 767px){
-.banner-section {
+@media (max-width: 767px) {
+  .banner-section {
     padding-bottom: 65px;
     padding-top: 60px;
-}
+  }
 }

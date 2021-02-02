@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
 // import Footer from '../components/Footer/Footer'
 import Footer from "../components/Footer/Footer"
-import Button from '../components/Button'
-import Content from '../components/Content'
+import Button from "../components/Button"
+import Content from "../components/Content"
 // Iamges
 import Img from "../images/3.jpg"
 import Analytics from "../images/analytics.png"
@@ -12,9 +12,9 @@ import Case from "../images/case.png"
 import Like from "../images/like.png"
 
 const Home = () => {
-    return (
-        <div>
-            <Header />
+  return (
+    <div>
+      <Header />
       <section className="banner-section d-flex">
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
@@ -27,7 +27,7 @@ const Home = () => {
               </h3>
               <h1>Xiir Frameworks deliver oversight with a single click</h1>
               <div className="btn-div">
-                <Button text='schedule a 5 minute demo' />
+                <Button text="schedule a 5 minute demo" />
               </div>
             </div>
           </div>
@@ -55,30 +55,36 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="d-flex">
-        <div className="container align-items-center text-center">
+      <section className="section-padding">
+        <div className="container">
           <div>
-            <Accordion
-              title="What is your return policy?"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
-            <Accordion
-              title="How do I track my order?"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
-            <Accordion
-              title="Can I purchase items again?"
-              content="
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        "
-            />
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div>
+                  <Accordion
+                    title="What is your return policy?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  <Accordion
+                    title="How do I track my order?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  <Accordion
+                    title="Can I purchase items again?"
+                    content="
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              "
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="btn-accod-div">
-            <Button text='explore more' />
+            <Button text="explore more" />
           </div>
         </div>
       </section>
@@ -197,8 +203,8 @@ const Home = () => {
       <div>
         <Footer />
       </div>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Home
