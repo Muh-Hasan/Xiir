@@ -61,3 +61,40 @@
     cursor: pointer;
   }
 } */
+
+.overlay {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9999999999999; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #52b9d3; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.overlay .btn{
+  border: 2px solid #52b9d3 !important;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: 22px !important;
+  padding: 8px 15px;
+  padding-left: 21px;
+  min-width: 160px;
+  text-transform: uppercase;
+  background-color: #fff;
+  display: inline-block;
+  color: #52b9d3;
+  text-align: left;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {padding-top: 15px;}
+}
+

@@ -41,7 +41,7 @@
   color: #243671;
 }
 
-.foot-menu .btn {
+.foot-menu .foot-btn {
   border: 2px solid #0069f1;
   color: #0069f1;
   font-weight: 600;
@@ -59,7 +59,7 @@
   display: inline-block;
   line-height: 20px;
 }
-.foot-menu .btn:hover {
+.foot-menu .foot-btn:hover {
   background-color: #0069f1;
   color: #fff;
   cursor: pointer;

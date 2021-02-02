@@ -21,22 +21,22 @@ const Footer = () => {
               <h2>Menu</h2>
               <ul className="foot-menu">
                 <li>
-                  <button className="btn">services</button>
+                  <button className="foot-btn">services</button>
                 </li>
                 <li>
-                  <button className="btn">parthners</button>
+                  <button className="foot-btn">parthners</button>
                 </li>
                 <li>
-                  <button className="btn">test drive</button>
+                  <button className="foot-btn">test drive</button>
                 </li>
                 <li>
-                  <button className="btn">about us</button>
+                  <button className="foot-btn">about us</button>
                 </li>
                 <li>
-                  <button className="btn">blogs</button>
+                  <button className="foot-btn">blogs</button>
                 </li>
                 <li>
-                  <button className="btn">contact</button>
+                  <button className="foot-btn">contact</button>
                 </li>
               </ul>
             </div>
