@@ -19,11 +19,12 @@ function Accordion(props) {
 
   return (
     <div className="card">
-      <div className='card-header'>
+      <div className={`card-header ${setActive}`}>
         <h2  className='mb-0 collapsed' onClick={toggleAccordion}>
           <span>{props.title}</span>
           <p className="accordion__icon">{showMinus ? "-" : "+"}</p>
         </h2>
+      </div>  
         <div
           ref={content}
           style={{ maxHeight: `${setHeight}` }}
@@ -34,7 +35,6 @@ function Accordion(props) {
             dangerouslySetInnerHTML={{ __html: props.content }}
           />
         </div>
-      </div>
     </div>
   )
 }
