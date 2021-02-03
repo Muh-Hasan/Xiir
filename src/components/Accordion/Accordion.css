@@ -1,30 +1,14 @@
-.accordion__section {
-  border-color: #0069f1;
-  border-radius: 0 !important;
-  border-width: 2px;
-}
-
-.accordion {
-  border-color: #0069f1;
-  border-bottom: none !important;
+.card-header {
+  border:1px solid #52b9d3;
+  border-bottom: none;
   box-shadow: none;
   padding: 0;
   background: transparent;
   border-radius: 0;
   margin-bottom: -1px;
-  cursor: pointer;
-  transition: background-color 0.6s ease;
 }
-
-.accordion_.accordion__title,
-.active {
-  background-color: #0069f1;
-  color: white;
-}
-
-.accordion__title {
-  background-color: #fff;
-  color: #0069f1;
+.card-header h2 {
+  color: #52b9d3;
   font-size: 16px;
   line-height: 21px;
   letter-spacing: 0.76px;
@@ -36,14 +20,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   cursor: pointer;
   min-height: 60px;
 }
-.accordion__title span {
+.card-header h2 span {
   width: calc(100% - 50px);
 }
+
+
+.card-header,
+.active {
+  background-color: #0069f1;
+  color: white;
+}
+
 .accordion__icon {
   font-size: 20px;
+  font-weight: 600;
   position: relative;
   transition: transform 0.6s ease;
 }

@@ -18,12 +18,12 @@ function Accordion(props) {
   }
 
   return (
-    <div className="accordion__section">
-      <div className='accordion'>
-        <button  onClick={toggleAccordion}>
-          <p className="accordion__title">{props.title}</p>
+    <div className="card">
+      <div className='card-header'>
+        <h2  className='mb-0 collapsed' onClick={toggleAccordion}>
+          <span>{props.title}</span>
           <p className="accordion__icon">{showMinus ? "-" : "+"}</p>
-        </button>
+        </h2>
         <div
           ref={content}
           style={{ maxHeight: `${setHeight}` }}
