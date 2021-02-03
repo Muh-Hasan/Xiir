@@ -104,7 +104,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="info-boxes">
+      <section className="section-padding info-boxes">
         <div className="container">
           <div className="d-flex info-boxes-div">
             <div>
@@ -126,15 +126,31 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="d-flex">
+      <section className="section-padding d-flex">
         <div className="container">
-          <div>
+          <div className='faq'>
             <h1>frequently asked questions</h1>
           </div>
           <div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
+                  <Accordion
+                    title="What is your return policy?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  <Accordion
+                    title="How do I track my order?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  <Accordion
+                    title="What is your return policy?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  <Accordion
+                    title="How do I track my order?"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
                   <Accordion
                     title="What is your return policy?"
                     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -160,24 +176,29 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="download-box">
+      <section className="download-box section-padding">
         <div className="container">
-          <div className="box">
+          <div className='our-media'>
+            <h1>Our media</h1>
+          </div>
+          <div className="box ">
+            <div className='down-heading'>
             <h2>download the xiir datesheet</h2>
-            <div>
-              <div>
+            </div>
+            <div className=' datasheet-down'>
+              <div className='input'>
                 <input placeholder="please enter a valid business email" />
               </div>
               <div>
-                <button>download</button>
+                <Button text='download' />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
+      <section className='section-padding'>
+        <div className='container youtube-channel'>
           <div>
             <h2>our youtube channel has more videos</h2>
           </div>
