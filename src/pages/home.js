@@ -11,6 +11,8 @@ import Analytics from "../images/analytics.png"
 import Case from "../images/case.png"
 import Like from "../images/like.png"
 
+import ReactPlayer from "react-player/youtube"
+
 const Home = () => {
   return (
     <div>
@@ -128,7 +130,7 @@ const Home = () => {
 
       <section className="section-padding d-flex">
         <div className="container">
-          <div className='faq'>
+          <div className="faq">
             <h1>frequently asked questions</h1>
           </div>
           <div>
@@ -178,40 +180,37 @@ const Home = () => {
 
       <section className="download-box section-padding">
         <div className="container">
-          <div className='our-media'>
+          <div className="our-media">
             <h1>Our media</h1>
           </div>
           <div className="box ">
-            <div className='down-heading'>
-            <h2>download the xiir datesheet</h2>
+            <div className="down-heading">
+              <h2>download the xiir datesheet</h2>
             </div>
-            <div className=' datasheet-down'>
-              <div className='input'>
+            <div className=" datasheet-down">
+              <div className="input">
                 <input placeholder="please enter a valid business email" />
               </div>
               <div>
-                <Button text='download' />
+                <Button text="download" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='section-padding'>
-        <div className='container youtube-channel'>
-          <div>
+      <section className="section-padding">
+        <div className="container youtube-channel">
+          <div style={{marginBottom: "20px"}}>
             <h2>our youtube channel has more videos</h2>
           </div>
-          <div>
-            <iframe
-              src="https://www.youtube.com/watch?v=QvfQd8NkzMk"
-              title="W3Schools Free Online Web Tutorials"
-            ></iframe>
+          <div >
+            <ReactPlayer width="100%" height='500px' url="https://www.youtube.com/watch?v=QvfQd8NkzMk" />
           </div>
         </div>
       </section>
 
-      <div>
+      <div className='section-padding'>
         <Footer />
       </div>
     </div>
