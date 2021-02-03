@@ -27,6 +27,7 @@
   cursor: pointer;
   font-weight: 500;
 }
+
 .site-header .main-triger button:hover {
   background-color: #243671;
   color: white;
@@ -40,11 +41,10 @@
   text-transform: uppercase;
   color: #243671 !important;
 }
+
 .site-header .header-icon img {
   max-width: 60px;
 }
-
-
 
 /* @media (max-width: 767px){
     .site-header .main-text h1 {
@@ -53,3 +53,108 @@
     font-weight: 500;
 }
 } */
+
+.menu-wrapper {
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #243671;
+  z-index: 99999999999999;
+  width: 0%;
+  opacity: 0;
+  transition: all 0.2s, 0.3s ease-in-out;
+}
+
+.menu-header {
+  padding: 25px 0;
+}
+.menu-close-triger .close-menu-triger {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.menu-close-triger .close-menu-triger img {
+  max-width: 35px;
+}
+.main-text-menu h1 {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.main-menu ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.menu-content {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.main-menu ul li button {
+  cursor: pointer;
+  border: 2px solid #fff;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: 22px;
+  padding: 7px 15px;
+  padding-left: 21px;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  min-width: 160px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.2s, 0.3s ease-in-out;
+  display: inline-block;
+  background-color: transparent;
+  font-weight: 500;
+}
+.main-menu ul li button:hover {
+  background-color: white;
+  color: #243671;
+}
+.menu-tagline {
+  margin-top: 20px;
+  max-width: 135px;
+}
+.menu-tagline h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 25px;
+  line-height: 26px;
+  letter-spacing: -1.37px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .menus-wrapper .menu-content {
+    height: calc(100vh - 98px);
+  }
+}
+@media (min-width: 768px) {
+  .menus-wrapper .menu-content {
+    height: calc(100vh - 98px);
+  }
+}
+@media (min-width: 768px) {
+  .menus-wrapper .menu-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 30px;
+  }
+}
