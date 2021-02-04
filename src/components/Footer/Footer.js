@@ -6,6 +6,7 @@ import Linkedin from "../../images/linkedin.png"
 import Twitter from "../../images/twitter.png"
 import Youtube from "../../images/youtube.png"
 
+import { Link } from '@reach/router'
 const Footer = () => {
   return (
     <footer className="footer-section">
@@ -30,7 +31,9 @@ const Footer = () => {
                   <button className="foot-btn">test drive</button>
                 </li>
                 <li>
+                  <Link to='/about'>
                   <button className="foot-btn">about us</button>
+                  </Link>
                 </li>
                 <li>
                   <button className="foot-btn">blogs</button>

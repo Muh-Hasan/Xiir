@@ -26,12 +26,26 @@ function Accordion(props) {
       <div
         ref={content}
         style={{ maxHeight: `${setHeight}` }}
-        className="accordion__content"
+        className="accordion__content container d-flex flex-column"
       >
-        <div
-          className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: props.content }}
-        />
+        <br />
+
+        <div className="row align-items-center justify-content-between content-area">
+          {props.img ? (
+            <>
+              <div className="col-sm-12 col-md-5 col-lg-5 text-col">
+                <h3>{props.content}</h3>
+              </div>
+              <div className="col-sm-12 col-md-6 col-lg-6 img-col">
+                <img src={props.img} alt={props.content} className="img" />
+              </div>
+            </>
+          ) : (
+            <div className="text-col">
+                <h3>{props.content}</h3>
+              </div>
+          )}
+        </div>
       </div>
     </div>
   )

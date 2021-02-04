@@ -9,6 +9,9 @@ import Content from "../components/Content"
 import Img from "../images/3.jpg"
 import Analytics from "../images/analytics.png"
 import Case from "../images/case.png"
+import AccOne from '../images/imageAccOne.png'
+import AccTwo from '../images/imageAccTwo.jpg'
+import AccThree from '../images/imageAccThree.png'
 import Like from "../images/like.png"
 
 import ReactPlayer from "react-player/youtube"
@@ -27,9 +30,9 @@ const Home = () => {
               <h3>
                 Senior managers spend way too much time ensuring compliance
               </h3>
-              <h1>Xiir Frameworks deliver oversight with a single click</h1>
+              <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
               <div className="btn-div">
-                <Button text="schedule a 5 minute demo" />
+                <Button text="GET AN INSTANT TEST DRIVE" />
               </div>
             </div>
           </div>
@@ -38,11 +41,11 @@ const Home = () => {
 
       <Content />
 
-      <section className="d-flex">
+      <section className="d-flex section-padding">
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
             <div className="col-sm-12 col-md-5 col-lg-5 text-col">
-              <h1>simplify compliance oversight</h1>
+              <h1>simplify your oversight</h1>
               <br />
               <h3>
                 at the heart of xiir is the understanding that managing
@@ -64,22 +67,19 @@ const Home = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
                   <Accordion
-                    title="What is your return policy?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="custom frameworks"
+                    content="aggregate, automate and manage all your projects that oversight matters."
+                    img={AccOne}
                   />
                   <Accordion
-                    title="How do I track my order?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="seamless governace"
+                    content="streamline your insights t who matters when it maatters with a single click action."
+                    img={AccTwo}
                   />
                   <Accordion
-                    title="Can I purchase items again?"
-                    content="
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              "
+                    title="smart controls"
+                    content="your intelligent dashborad that superpowers descision-making."
+                    img={AccThree}
                   />
                 </div>
               </div>

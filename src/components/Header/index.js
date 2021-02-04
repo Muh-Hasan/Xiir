@@ -3,6 +3,7 @@ import Logo from "../../images/xiir.png"
 import Close from "../../images/closeMenu.svg"
 import "./Header.css"
 import gsap from "gsap"
+import { Link } from "@reach/router"
 const Header = () => {
   const hiddenMenu = useRef(null)
 
@@ -19,7 +20,9 @@ const Header = () => {
         <div className="container">
           <div className="row justify-content-between align-items-center">
             <div className="col header-icon">
+              <Link to='/'>
               <img src={Logo} alt="logo" />
+              </Link>
             </div>
             <div className="col text-center main-text">
               <h1> smart compliance oversight</h1>
@@ -40,9 +43,6 @@ const Header = () => {
                 <div className="col header-icon">
                   <img src={Logo} alt="logo" />
                 </div>
-                {/* <div className="col text-center main-text-menu">
-                  <h1>smart compliance oversight</h1>
-                </div> */}
                 <div className="col menu-close-triger">
                   <div style={{ textAlign: "right" }}>
                     <button
@@ -70,7 +70,9 @@ const Header = () => {
                     <button>test drive</button>
                   </li>
                   <li>
+                    <Link to='/about'>
                     <button>about us</button>
+                    </Link>
                   </li>
                   <li>
                     <button>blogs</button>
