@@ -1,9 +1,15 @@
 import React, { useRef } from "react"
-import Logo from "../../images/xiir.png"
-import Close from "../../images/closeMenu.svg"
-import "./Header.css"
+import { useMediaQuery } from "react-responsive"
 import gsap from "gsap"
 import { Link } from "@reach/router"
+
+// CSS
+import "./Header.css"
+
+// Images
+import Logo from "../../images/xiir.png"
+import Close from "../../images/closeMenu.svg"
+
 const Header = () => {
   const hiddenMenu = useRef(null)
 
@@ -13,22 +19,22 @@ const Header = () => {
   const closeHiddenMenu = () => {
     gsap.to(hiddenMenu.current, { opacity: 0, width: "0%" })
   }
-
+  const isTablet = useMediaQuery({ query: "(max-width: 768px)" })
   return (
     <div className="website-header">
       <header className="site-header fixed-top ">
         <div className="container">
           <div className="row justify-content-between align-items-center">
             <div className="col header-icon">
-              <Link to='/'>
-              <img src={Logo} alt="logo" />
+              <Link to="/">
+                <img src={Logo} alt="logo" />
               </Link>
             </div>
             <div className="col text-center main-text">
               <h1> smart compliance oversight</h1>
             </div>
             <div className="col main-triger">
-              <div style={{ textAlign: "right" }}>
+              <div className="main-div">
                 <button onClick={() => showHiddenMenu()}>
                   <span>menu</span>
                 </button>
@@ -70,8 +76,8 @@ const Header = () => {
                     <button>test drive</button>
                   </li>
                   <li>
-                    <Link to='/about'>
-                    <button>about us</button>
+                    <Link to="/about">
+                      <button>about us</button>
                     </Link>
                   </li>
                   <li>
@@ -84,7 +90,7 @@ const Header = () => {
               </div>
               <div className="container-fluid menu-footer d-flex justify-content-between">
                 <div className="col menu-tagline">
-                  <h2>get smart with your  oversight</h2>
+                  <h2>get smart with your oversight</h2>
                 </div>
               </div>
             </div>
