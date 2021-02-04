@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react"
 import "./Accordion.css"
-
 function Accordion(props) {
   const [setActive, setActiveState] = useState("")
   const [setHeight, setHeightState] = useState("0px")
@@ -33,15 +32,17 @@ function Accordion(props) {
         <div className="row align-items-center justify-content-between content-area">
           {props.img ? (
             <>
-              <div className="col-sm-12 col-md-5 col-lg-5 text-col">
+              <div className="col-sm-12 col-md-5 col-lg-5 accordion__text">
                 <h3>{props.content}</h3>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 img-col">
+              <div className="col-sm-12 col-md-6 col-lg-6 acc-img">
                 <img src={props.img} alt={props.content} className="img" />
+              </div>
+              <div>
               </div>
             </>
           ) : (
-            <div className="text-col">
+            <div className="accordion__text container">
                 <h3>{props.content}</h3>
               </div>
           )}

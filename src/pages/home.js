@@ -86,7 +86,7 @@ const Home = () => {
             </div>
           </div>
           <div className="btn-accod-div">
-            <Button text="explore more" />
+            <Button text="explore more" className="btn-purple" />
           </div>
         </div>
       </section>

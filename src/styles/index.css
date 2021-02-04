@@ -27,6 +27,16 @@
   font-weight: 500 !important;
   transition: all 0.2s, 0.3s ease-in-out;
 }
+.btn-purple{
+  border: 2px solid #b61e77 !important;
+  color: #b61e77 !important;
+}
+.btn-purple:hover{
+  background-color: #b61e77 !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+
 .btn:hover {
   background-color: #52b9d3;
   color: #fff;
