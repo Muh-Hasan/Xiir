@@ -43,16 +43,8 @@
 }
 
 .site-header .header-icon img {
-  max-width: 60px;
+  max-width: 80px;
 }
-
-/* @media (max-width: 767px){
-    .site-header .main-text h1 {
-    font-size: 16px;
-    letter-spacing: .5px;
-    font-weight: 500;
-}
-} */
 
 .menu-wrapper {
   position: fixed;

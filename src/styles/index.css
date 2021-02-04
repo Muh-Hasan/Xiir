@@ -120,6 +120,7 @@
 .xiir-benefits .div-head h1 {
   font-size: 32px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .xiir-benefits .div-para h4 {
   font-size: 20px;

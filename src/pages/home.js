@@ -9,9 +9,9 @@ import Content from "../components/Content"
 import Img from "../images/3.jpg"
 import Analytics from "../images/analytics.png"
 import Case from "../images/case.png"
-import AccOne from '../images/imageAccOne.png'
-import AccTwo from '../images/imageAccTwo.jpg'
-import AccThree from '../images/imageAccThree.png'
+import AccOne from "../images/imageAccOne.png"
+import AccTwo from "../images/imageAccTwo.jpg"
+import AccThree from "../images/imageAccThree.png"
 import Like from "../images/like.png"
 
 import ReactPlayer from "react-player/youtube"
@@ -94,12 +94,12 @@ const Home = () => {
       <section className="xiir-benefits">
         <div className="container">
           <div className="div-head">
-            <h1>How Xiir Benefits You</h1>
+            <h1>why you should test drive Xiir</h1>
           </div>
           <div className="div-para">
             <h4>
-              Customised compliance frameworks across the business delivering
-              your oversight easier, faster and more reliable with better
+              Customised frameworks across the business delivering
+              oversight of your projects  easier, faster and more reliable with better
               accountability, transparency and outcomes.
             </h4>
           </div>
@@ -112,7 +112,7 @@ const Home = () => {
             <div>
               <img src={Case} alt="Case" />
               <h4>Real-time Visibility</h4>
-              <p>Simplify control for all your compliance oversight</p>
+              <p>Simplify oversights and control for all your projects</p>
             </div>
             <div>
               <img src={Analytics} alt="Analytics" />
@@ -201,16 +201,20 @@ const Home = () => {
 
       <section className="section-padding">
         <div className="container youtube-channel">
-          <div style={{marginBottom: "20px"}}>
+          <div style={{ marginBottom: "20px" }}>
             <h2>our youtube channel has more videos</h2>
           </div>
-          <div >
-            <ReactPlayer width="100%" height='500px' url="https://www.youtube.com/watch?v=QvfQd8NkzMk" />
+          <div>
+            <ReactPlayer
+              width="100%"
+              height="500px"
+              url="https://www.youtube.com/watch?v=QvfQd8NkzMk"
+            />
           </div>
         </div>
       </section>
 
-      <div className='section-padding'>
+      <div className="section-padding">
         <Footer />
       </div>
     </div>

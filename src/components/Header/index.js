@@ -84,7 +84,7 @@ const Header = () => {
               </div>
               <div className="container-fluid menu-footer d-flex justify-content-between">
                 <div className="col menu-tagline">
-                  <h2> smart compliance oversight</h2>
+                  <h2>get smart with your  oversight</h2>
                 </div>
               </div>
             </div>
