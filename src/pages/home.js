@@ -13,7 +13,7 @@ import AccOne from "../images/imageAccOne.png"
 import AccTwo from "../images/imageAccTwo.jpg"
 import AccThree from "../images/imageAccThree.png"
 import Like from "../images/like.png"
-
+import Another from '../images/anotherImg.jpg'
 import ReactPlayer from "react-player/youtube"
 
 const Home = () => {
@@ -54,7 +54,7 @@ const Home = () => {
               <h3>and that's why it needs to be made easy for them</h3>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-col">
-              <img src={Img} alt="nothing" className="img" />
+              <img src={Another} alt="nothing" className="img" />
             </div>
           </div>
         </div>
