@@ -130,6 +130,19 @@
   letter-spacing: -1.37px;
   text-transform: capitalize;
 }
+.menu-footer-login {
+  text-align: right;
+  margin-top: 60px;
+}
+.menu-footer-login h2 a{
+  color: #fff !important;
+  margin: 0;
+  font-size: 25px;
+  line-height: 26px;
+  letter-spacing: -1.37px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
 .main-triger .main-div {
   text-align: right;
 }
@@ -140,10 +153,10 @@
   .main-triger {
     flex-grow: 0;
   }
-  .main-text{
+  .main-text {
     flex-grow: 0;
   }
-  .main-text h1{
+  .main-text h1 {
     font-size: 0 !important;
   }
   .menus-wrapper .menu-content {
@@ -162,7 +175,7 @@
     justify-content: center;
     align-items: center;
   }
-  .main-triger button:hover  span {
+  .main-triger button:hover span {
     background-color: white !important;
   }
   .main-triger button span {

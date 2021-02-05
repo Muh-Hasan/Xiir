@@ -68,17 +68,17 @@ const Home = () => {
                 <div>
                   <Accordion
                     title="custom frameworks"
-                    content="aggregate, automate and manage all your projects that oversight matters."
+                    content="Aggregate, automate and manage all your projects that oversight matters."
                     img={AccOne}
                   />
                   <Accordion
                     title="seamless governace"
-                    content="streamline your insights t who matters when it maatters with a single click action."
+                    content="Streamline your insights t who matters when it maatters with a single click action."
                     img={AccTwo}
                   />
                   <Accordion
                     title="smart controls"
-                    content="your intelligent dashborad that superpowers descision-making."
+                    content="Your intelligent dashborad that superpowers descision-making."
                     img={AccThree}
                   />
                 </div>

@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import { useMediaQuery } from "react-responsive"
 import gsap from "gsap"
 import { Link } from "@reach/router"
 
@@ -19,7 +18,6 @@ const Header = () => {
   const closeHiddenMenu = () => {
     gsap.to(hiddenMenu.current, { opacity: 0, width: "0%" })
   }
-  const isTablet = useMediaQuery({ query: "(max-width: 768px)" })
   return (
     <div className="website-header">
       <header className="site-header fixed-top ">
@@ -70,14 +68,14 @@ const Header = () => {
                     <button>services</button>
                   </li>
                   <li>
-                    <button>parthners</button>
-                  </li>
-                  <li>
                     <button>test drive</button>
                   </li>
                   <li>
+                    <button>parthners</button>
+                  </li>
+                  <li>
                     <Link to="/about">
-                      <button>about us</button>
+                      <button>about</button>
                     </Link>
                   </li>
                   <li>
@@ -91,6 +89,9 @@ const Header = () => {
               <div className="container-fluid menu-footer d-flex justify-content-between">
                 <div className="col menu-tagline">
                   <h2>get smart with your oversight</h2>
+                </div>
+                <div className='col menu-footer-login d-md-block'>
+                  <h2><a href='https://xiir.com/' target='blank'>Login</a></h2>
                 </div>
               </div>
             </div>

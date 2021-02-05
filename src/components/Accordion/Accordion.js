@@ -6,6 +6,7 @@ function Accordion(props) {
   const [showMinus, setShowMinus] = useState(false)
   const content = useRef(null)
 
+  
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "")
     setShowMinus(!showMinus)
