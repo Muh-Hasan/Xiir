@@ -215,14 +215,20 @@
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 20px;
+  max-width: 450px;
 }
 .datasheet-down .input input {
-  height: 40px;
-  width: 350px;
-  margin-bottom: 10px;
-  background-color: lightgray;
+  border-radius: 22px;
   border: none;
-  border-radius: 15px;
+  height: 40px;
+  font-size: 14px;
+  letter-spacing: 0.31px;
+  padding: 7px 25px 9px;
+  margin-bottom: 5px;
+  width: 100%;
+  background-color: lightgray;
+  text-transform: uppercase;
+  color: #243671;
 }
 
 .youtube-channel h2 {

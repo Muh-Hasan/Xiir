@@ -72,7 +72,7 @@ const Header = () => {
                     <button>test drive</button>
                   </li>
                   <li>
-                    <button>parthners</button>
+                    <button>partners</button>
                   </li>
                   <li>
                     <Link to="/about">
@@ -80,7 +80,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <button>blogs</button>
+                    <button>blog</button>
                   </li>
                   <li>
                     <button>contact</button>

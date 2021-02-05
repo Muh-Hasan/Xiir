@@ -46,6 +46,7 @@ const Content = () => {
                 responsibilities.
               </h3>
             </div>
+            <br />
           </div>
         </div>
       </section>   

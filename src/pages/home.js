@@ -96,6 +96,7 @@ const Home = () => {
           <div className="div-head">
             <h1>why you should test drive Xiir</h1>
           </div>
+          <br />
           <div className="div-para">
             <h4>
               Customised frameworks across the business delivering
@@ -190,6 +191,7 @@ const Home = () => {
               <div className="input">
                 <input placeholder="please enter a valid business email" />
               </div>
+              <br />
               <div>
                 <Button text="download" />
               </div>
