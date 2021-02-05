@@ -6,7 +6,7 @@ import Linkedin from "../../images/linkedin.png"
 import Twitter from "../../images/twitter.png"
 import Youtube from "../../images/youtube.png"
 
-import { Link } from '@reach/router'
+import { Link } from "@reach/router"
 const Footer = () => {
   return (
     <footer className="footer-section">
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="row justify-content-between ">
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 col-tagline">
               <h1>xiir</h1>
-              <h2>smart compliance oversight </h2>
+              <h2>smart oversight </h2>
               <h5>sales@xiir.com</h5>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 footer-menu">
@@ -25,18 +25,18 @@ const Footer = () => {
                   <button className="foot-btn">services</button>
                 </li>
                 <li>
-                  <button className="foot-btn">parthners</button>
-                </li>
-                <li>
                   <button className="foot-btn">test drive</button>
                 </li>
                 <li>
-                  <Link to='/about'>
-                  <button className="foot-btn">about us</button>
+                  <button className="foot-btn">parthners</button>
+                </li>
+                <li>
+                  <Link to="/about">
+                    <button className="foot-btn">about</button>
                   </Link>
                 </li>
                 <li>
-                  <button className="foot-btn">blogs</button>
+                  <button className="foot-btn">blog</button>
                 </li>
                 <li>
                   <button className="foot-btn">contact</button>
@@ -57,16 +57,32 @@ const Footer = () => {
         <div className="footer-bottom d-flex align-items-center justify-content-between">
           <ul className="social-media">
             <li>
-              <img src={Linkedin} alt="Linkedin" />
+              <a
+                href="https://www.linkedin.com/company/senior-managers/"
+                target="blank"
+              >
+                <img src={Linkedin} alt="Linkedin" />
+              </a>
             </li>
-            <li>
-              <img src={Twitter} alt="Twitter" />
+            <li className="li-margin">
+              <a href="https://twitter.com/seniormanagers" target="blank">
+                <img src={Twitter} alt="Twitter" />
+              </a>
             </li>
-            <li>
+            <li className="li-margin-1">
+              <a
+                href="https://www.youtube.com/channel/UC396CWlr8A_p36XNW-QJMMg"
+                target="blank"
+              ></a>
               <img src={Youtube} alt="Youtube" />
             </li>
           </ul>
-          <p>© 2019 Aiir</p>
+          <div className="d-flex align-items-center justify-content-between privacy">
+            <p>Privacy Policy</p>
+            <p>Terms</p>
+            <p>Pay</p>
+          </div>
+          <p>© 2021 Aiir</p>
         </div>
       </div>
     </footer>

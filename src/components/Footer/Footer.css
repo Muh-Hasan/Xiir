@@ -3,7 +3,7 @@
   padding-top: 40px;
 }
 .footer-section .footer-top {
-  border-bottom: 1px solid #0069f1;
+  border-bottom: 1px solid #243671;
   padding-bottom: 31px;
 }
 .footer-section .col-tagline {
@@ -42,8 +42,8 @@
 }
 
 .foot-menu .foot-btn {
-  border: 2px solid #0069f1;
-  color: #0069f1;
+  border: 2px solid #243671;
+  color: #243671;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.31px;
@@ -60,7 +60,7 @@
   line-height: 20px;
 }
 .foot-menu .foot-btn:hover {
-  background-color: #0069f1;
+  background-color: #243671;
   color: #fff;
   cursor: pointer;
 }
@@ -76,16 +76,16 @@
   background-color: transparent;
   height: 40px;
   font-size: 14px;
-  border: 2px solid #0069f1;
+  border: 2px solid #243671;
   letter-spacing: 0.31px;
   padding: 7px 25px 9px;
   margin-bottom: 5px;
   width: 100%;
   text-transform: uppercase;
-  color: #0069f1;
+  color: #243671;
 }
 .footer-form button {
-  border: 2px solid #0069f1;
+  border: 2px solid #243671;
   font-size: 15px;
   letter-spacing: 0.31px;
   height: 40px;
@@ -99,7 +99,7 @@
   background-color: transparent;
   transition: all 0.2s, 0.3s ease-in-out;
   color: #fff;
-  background-color: #0069f1;
+  background-color: #243671;
   text-align: left;
   line-height: 1;
   font-weight: 600;
@@ -107,7 +107,7 @@
 .footer-form button:hover {
   cursor: pointer;
   background-color: transparent;
-  color: #0069f1;
+  color: #243671;
 }
 .footer-section .footer-bottom {
   padding: 13px 0 20px;
@@ -136,7 +136,21 @@
   height: 25px;
 }
 
+.privacy p {
+  cursor: pointer;
+  flex-wrap: wrap;
+  margin-left: 15px !important;
+}
+.social-media .li-margin {
+  margin-top: 5px;
+}
+.social-media .li-margin-1 {
+  margin-top: 10px;
+}
 @media (max-width: 767px) {
+  .privacy p {
+    margin-left: 5px !important;
+  }
   .footer-section .col-tagline {
     max-width: 100%;
     width: 100%;

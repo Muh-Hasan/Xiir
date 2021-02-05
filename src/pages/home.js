@@ -73,7 +73,7 @@ const Home = () => {
                   />
                   <Accordion
                     title="seamless governace"
-                    content="Streamline your insights t who matters when it maatters with a single click action."
+                    content="Streamline your insights to who when it matters with a single click action."
                     img={AccTwo}
                   />
                   <Accordion
