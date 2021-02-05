@@ -138,20 +138,19 @@ const Home = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
                   <Accordion
-                    title="What is your return policy?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  />
+                    title="Real-time Visibility"
+                    content="Simplify oversights and control for all your projects"/>
                   <Accordion
-                    title="How do I track my order?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  />
+                    title="Supercharge Governance"
+                    content="Communicate to the right people at the right time"/>
+                  
                   <Accordion
-                    title="What is your return policy?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  />
+                    title="Supercharge Governance"
+                    content="Communicate to the right people at the right time"/>
+                  
                   <Accordion
-                    title="How do I track my order?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="Informed Decision-making"
+                    content="Bring all relevant insights to your fingertips"
                   />
                   <Accordion
                     title="What is your return policy?"
