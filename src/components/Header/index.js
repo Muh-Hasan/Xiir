@@ -8,6 +8,7 @@ import "./Header.css"
 // Images
 import Logo from "../../images/xiir.png"
 import Close from "../../images/closeMenu.svg"
+import LogoWhite from '../../images/logoWhite.png'
 
 const Header = () => {
   const hiddenMenu = useRef(null)
@@ -29,7 +30,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="col text-center main-text">
-              <h1> smart compliance oversight</h1>
+              <h1> smart oversight</h1>
             </div>
             <div className="col main-triger">
               <div className="main-div">
@@ -45,7 +46,7 @@ const Header = () => {
             <div className="container">
               <div className="row justify-content-between align-items-center">
                 <div className="col header-icon">
-                  <img src={Logo} alt="logo" />
+                  <img src={LogoWhite} alt="logo" />
                 </div>
                 <div className="col menu-close-triger">
                   <div style={{ textAlign: "right" }}>
@@ -88,7 +89,7 @@ const Header = () => {
               </div>
               <div className="container-fluid menu-footer d-flex justify-content-between">
                 <div className="col menu-tagline">
-                  <h2>get smart with your oversight</h2>
+                  <h2>get smart with oversight</h2>
                 </div>
                 <div className='col menu-footer-login d-md-block'>
                   <h2><a href='https://xiir.com/' target='blank'>Login</a></h2>

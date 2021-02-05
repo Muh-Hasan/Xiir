@@ -32,7 +32,7 @@ const Home = () => {
               </h3>
               <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
               <div className="btn-div">
-                <Button text="GET AN INSTANT TEST DRIVE" />
+                <Button text="GET AN INSTANT TEST DRIVE" className='btn-purple' />
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ const Home = () => {
       <section className="download-box section-padding">
         <div className="container">
           <div className="our-media">
-            <h1>Our media</h1>
+            <h1>some items for you</h1>
           </div>
           <div className="box ">
             <div className="down-heading">
@@ -200,9 +200,9 @@ const Home = () => {
 
       <section className="section-padding">
         <div className="container youtube-channel">
-          <div style={{ marginBottom: "20px" }}>
+          {/* <div style={{ marginBottom: "20px" }}>
             <h2>our youtube channel has more videos</h2>
-          </div>
+          </div> */}
           <div>
             <ReactPlayer
               width="100%"

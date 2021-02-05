@@ -47,7 +47,7 @@
 .accordion__content {
   background-color: white;
   overflow: auto;
-  transition: max-height 0.6s ease;
+  /* transition: max-height 0.6s ease; */
 }
 
 .accordion__text h3{

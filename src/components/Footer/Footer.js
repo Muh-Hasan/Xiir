@@ -28,7 +28,7 @@ const Footer = () => {
                   <button className="foot-btn">test drive</button>
                 </li>
                 <li>
-                  <button className="foot-btn">parthners</button>
+                  <button className="foot-btn">partners</button>
                 </li>
                 <li>
                   <Link to="/about">
@@ -82,7 +82,7 @@ const Footer = () => {
             <p>Terms</p>
             <p>Pay</p>
           </div>
-          <p>© 2021 Aiir</p>
+          <p>© 2021 Xiir</p>
         </div>
       </div>
     </footer>

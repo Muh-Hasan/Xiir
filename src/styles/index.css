@@ -27,11 +27,11 @@
   font-weight: 500 !important;
   transition: all 0.2s, 0.3s ease-in-out;
 }
-.btn-purple{
+.btn-purple {
   border: 2px solid #b61e77 !important;
   color: #b61e77 !important;
 }
-.btn-purple:hover{
+.btn-purple:hover {
   background-color: #b61e77 !important;
   color: #fff !important;
   cursor: pointer;
@@ -69,12 +69,14 @@
   padding: 0% 0 0 12%;
 }
 .text-col h3 {
+  color: #243671;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 22px;
   text-transform: capitalize;
 }
 .text-col h1 {
+  color: #243671;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
@@ -107,15 +109,18 @@
   overflow: hidden;
 }
 .content-lines .h1-one {
+  color: #243671;
   font-size: 25px;
   text-transform: capitalize;
 }
 .content-lines .h1-two {
+  color: #243671;
   font-size: 35px;
   font-weight: 600;
   text-transform: capitalize;
 }
 .content-lines .h3-one {
+  color: #243671;
   font-size: 20px;
   font-weight: 400;
 }
@@ -128,11 +133,13 @@
   margin-bottom: 20px;
 }
 .xiir-benefits .div-head h1 {
+  color: #243671;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
 }
 .xiir-benefits .div-para h4 {
+  color: #243671;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
@@ -155,10 +162,13 @@
   margin-bottom: 5px;
 }
 .info-boxes-div p {
-  color: #757575;
+  color: #243671;
   font-weight: 500;
+  font-size: 14px;
 }
-
+.info-boxes-div h4 {
+  color: #243671;
+}
 .section-padding {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -168,6 +178,7 @@
   margin-bottom: 20px;
 }
 .faq h1 {
+  color: #243671;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
@@ -177,6 +188,7 @@
   margin-bottom: 20px;
 }
 .our-media h1 {
+  color: #243671;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
@@ -186,29 +198,33 @@
   height: auto;
   /* background-image: linear-gradient(180deg, #243671 0%, #009ab1 100%); */
 }
-.box .down-heading{
+.box .down-heading {
   padding-top: 20px;
 }
-.box .down-heading h2{
+.box .down-heading h2 {
+  color: #243671;
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 500;
   /* color: white; */
 }
-.datasheet-down{
+.datasheet-down {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.datasheet-down .input input{
+.datasheet-down .input input {
   height: 40px;
-    width: 350px;
-    margin-bottom: 10px;
+  width: 350px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 15px;
 }
 
-.youtube-channel h2{
+.youtube-channel h2 {
   text-transform: capitalize;
   font-size: 32px;
   font-weight: 600;
