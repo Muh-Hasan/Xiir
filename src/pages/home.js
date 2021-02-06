@@ -113,7 +113,7 @@ const Home = () => {
             <div>
               <img src={Case} alt="Case" />
               <h4>Real-time Visibility</h4>
-              <p>Simplify oversights and control for all your projects</p>
+              <p>Simplify oversight and control for all your projects</p>
             </div>
             <div>
               <img src={Analytics} alt="Analytics" />
@@ -193,7 +193,7 @@ const Home = () => {
               </div>
               <br />
               <div>
-                <Button text="download" />
+                <Button text="download" className='btn-purple' />
               </div>
             </div>
           </div>
@@ -202,9 +202,6 @@ const Home = () => {
 
       <section className="section-padding">
         <div className="container youtube-channel">
-          {/* <div style={{ marginBottom: "20px" }}>
-            <h2>our youtube channel has more videos</h2>
-          </div> */}
           <div>
             <ReactPlayer
               width="100%"
@@ -215,7 +212,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="section-padding">
+      <div className="section-padding-2">
         <Footer />
       </div>
     </div>

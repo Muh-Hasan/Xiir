@@ -78,9 +78,9 @@ const Footer = () => {
             </li>
           </ul>
           <div className="d-flex align-items-center justify-content-between privacy">
-            <p>Privacy Policy</p>
-            <p>Terms</p>
-            <p>Pay</p>
+            <p>Privacy Policy |</p>
+            <p>Terms |</p>
+            <p>Pay </p>
           </div>
           <p>© 2021 Xiir</p>
         </div>

@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
-* {
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');* {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Cairo', sans-serif;
   outline: none !important;
   text-decoration: none !important;
 }
@@ -97,6 +96,7 @@
 }
 .content-lines {
   flex: 1 !important;
+  padding-bottom: 10px;
 }
 .content-lines h3 {
   font-weight: 400;
@@ -152,10 +152,15 @@
   justify-content: space-between;
 }
 .info-boxes-div div {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  max-width: 280px;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
   text-align: center;
   margin-bottom: 15px;
+}
+.info-boxes-div div:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .info-boxes-div img {
   margin-top: 20px;
@@ -165,18 +170,20 @@
 .info-boxes-div p {
   color: #243671;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
+  padding-bottom: 10px;
 }
 .info-boxes-div h4 {
   color: #243671;
+  margin-bottom: 10px;
 }
 .section-padding {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .faq {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .faq h1 {
   color: #243671;

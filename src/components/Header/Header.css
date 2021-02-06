@@ -127,7 +127,7 @@
   margin: 0;
   font-size: 25px;
   line-height: 26px;
-  letter-spacing: -1.37px;
+  letter-spacing: 1.3px;
   text-transform: capitalize;
 }
 .menu-footer-login {
@@ -139,12 +139,15 @@
   margin: 0;
   font-size: 25px;
   line-height: 26px;
-  letter-spacing: -1.37px;
+  letter-spacing: 1.3px;
   text-transform: capitalize;
   cursor: pointer;
 }
 .main-triger .main-div {
   text-align: right;
+}
+.section-padding-2{
+  padding-top: 60px;
 }
 @media (max-width: 768px) {
   .site-header .header-icon img {

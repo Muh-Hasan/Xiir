@@ -54,8 +54,9 @@
   color: #243671;
   font-size: 24px;
   line-height: 26px;
-  letter-spacing: -1.5px;
+  letter-spacing: 1.2px;
   width: 100%;
+  padding-bottom: 10px;
 }
 .acc-img{
   max-width: 352px;
