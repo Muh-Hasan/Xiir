@@ -28,7 +28,7 @@ const Home = () => {
             </div>
             <div className="col-sm-12 col-md-5 col-lg-5 text-col">
               <h3>
-                Senior managers spend way too much time ensuring compliance
+                Senior managers spend way too much time ensuring compliance.
               </h3>
               <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
               <div className="btn-div">
@@ -41,7 +41,7 @@ const Home = () => {
 
       <Content />
 
-      <section className="d-flex section-padding">
+      <section className="d-flex section-padding-2">
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
             <div className="col-sm-12 col-md-5 col-lg-5 text-col">
@@ -49,9 +49,9 @@ const Home = () => {
               <br />
               <h3>
                 at the heart of xiir is the understanding that managing
-                compliance is one of the many things senior mangers do
+                compliance is one of the many things senior mangers do.
               </h3>
-              <h3>and that's why it needs to be made easy for them</h3>
+              <h3>and that's why it needs to be made easy for them.</h3>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-col">
               <img src={Another} alt="nothing" className="img" />
