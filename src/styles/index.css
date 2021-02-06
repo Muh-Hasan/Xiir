@@ -261,4 +261,7 @@
   .info-boxes-div {
     justify-content: center;
   }
+  .header-icon img {
+    max-width: 60px;
+  }
 }

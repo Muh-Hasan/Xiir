@@ -27,10 +27,10 @@ const Footer = () => {
               <h2>Menu</h2>
               <ul className="foot-menu">
                 <li>
-                  <button className="foot-btn">services</button>
+                  <button className="foot-btn">test drive</button>
                 </li>
                 <li>
-                  <button className="foot-btn">test drive</button>
+                  <button className="foot-btn">services</button>
                 </li>
                 <li>
                   <button className="foot-btn">partners</button>
@@ -77,7 +77,7 @@ const Footer = () => {
             <img src={Youtube} alt="Youtube" />
           </li>
           <li>
-            <p>Privacy Policy</p>
+            <p>Privacy</p>
           </li>
           <li>
             <p> | </p>
