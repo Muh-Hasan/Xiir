@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding info-boxes">
+      <section className=" info-boxes">
         <div className="container">
           <div className="d-flex info-boxes-div">
             <div>

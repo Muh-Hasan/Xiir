@@ -5,6 +5,9 @@
   outline: none !important;
   text-decoration: none !important;
 }
+.header-icon img {
+  max-width: 100px;
+}
 .btn {
   border: 2px solid #52b9d3 !important;
   font-size: 15px;
@@ -146,6 +149,13 @@
   line-height: 1.5;
 }
 
+.info-boxes{
+  background-color: #FFFF66	;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 .info-boxes-div {
   flex-wrap: wrap;
   flex-direction: row;
@@ -156,10 +166,10 @@
   width: 300px;
   text-align: center;
   margin-bottom: 15px;
+  background-color: white;
 }
 .info-boxes-div div:hover {
   cursor: pointer;
-  transform: scale(1.2, 1.2);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .info-boxes-div img {
@@ -178,8 +188,8 @@
   margin-bottom: 10px;
 }
 .section-padding {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .faq {

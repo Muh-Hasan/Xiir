@@ -35,7 +35,7 @@
 }
 .foot-menu > li {
   list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .footer-menu h2 {
   color: #243671;
@@ -113,13 +113,10 @@
   padding: 13px 0 20px;
 }
 .footer-section .footer-bottom .social-media {
-  width: 85px;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
 }
 .footer-section .footer-bottom p {
   color: #243671;

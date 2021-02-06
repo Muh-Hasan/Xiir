@@ -5,6 +5,7 @@ import "./Footer.css"
 import Linkedin from "../../images/linkedin.png"
 import Twitter from "../../images/twitter.png"
 import Youtube from "../../images/youtube.png"
+import Logo from "../../images/xiir.png"
 
 import { Link } from "@reach/router"
 const Footer = () => {
@@ -14,7 +15,11 @@ const Footer = () => {
         <div className="footer-top">
           <div className="row justify-content-between ">
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 col-tagline">
-              <h1>xiir</h1>
+              <div className=" header-icon">
+                <Link to="/">
+                  <img src={Logo} alt="logo" />
+                </Link>
+              </div>
               <h2>smart oversight </h2>
               <h5>sales@xiir.com</h5>
             </div>
@@ -29,11 +34,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <button className="foot-btn">partners</button>
-                </li>
-                <li>
-                  <Link to="/about">
-                    <button className="foot-btn">about</button>
-                  </Link>
                 </li>
                 <li>
                   <button className="foot-btn">blog</button>
@@ -54,8 +54,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer-bottom d-flex align-items-center justify-content-between">
-          <ul className="social-media">
+        <div className="footer-bottom  container ">
+          <ul className="social-media d-flex align-items-center justify-content-between">
             <li>
               <a
                 href="https://www.linkedin.com/company/senior-managers/"
@@ -64,25 +64,40 @@ const Footer = () => {
                 <img src={Linkedin} alt="Linkedin" />
               </a>
             </li>
-            <li className="li-margin">
-              <a href="https://twitter.com/seniormanagers" target="blank">
-                <img src={Twitter} alt="Twitter" />
-              </a>
-            </li>
-            <li className="li-margin-1">
-              <a
-                href="https://www.youtube.com/channel/UC396CWlr8A_p36XNW-QJMMg"
-                target="blank"
-              ></a>
-              <img src={Youtube} alt="Youtube" />
-            </li>
-          </ul>
-          <div className="d-flex align-items-center justify-content-between privacy">
-            <p>Privacy Policy |</p>
-            <p>Terms |</p>
+          <li className="">
+            <a href="https://twitter.com/seniormanagers" target="blank">
+              <img src={Twitter} alt="Twitter" />
+            </a>
+          </li>
+          <li className="">
+            <a
+              href="https://www.youtube.com/channel/UC396CWlr8A_p36XNW-QJMMg"
+              target="blank"
+            ></a>
+            <img src={Youtube} alt="Youtube" />
+          </li>
+          <li>
+            <p>Privacy Policy</p>
+          </li>
+          <li>
+            <p> | </p>
+          </li>
+          <li>
+            <p>Terms</p>
+          </li>
+          <li>
+            <p> | </p>
+          </li>
+          <li>
             <p>Pay </p>
-          </div>
-          <p>© 2021 Xiir</p>
+          </li>
+          <li>
+            <p> | </p>
+          </li>
+          <li>
+            <p>© 2021 Xiir</p>
+          </li>
+          </ul>
         </div>
       </div>
     </footer>
