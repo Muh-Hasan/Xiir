@@ -66,18 +66,13 @@ const Header = () => {
               <div className="container-fluid main-menu d-flex justify-content-center flex-column align-items-center">
                 <ul>
                   <li>
-                    <button>services</button>
-                  </li>
-                  <li>
                     <button>test drive</button>
                   </li>
                   <li>
-                    <button>partners</button>
+                    <button>services</button>
                   </li>
                   <li>
-                    <Link to="/about">
-                      <button>about</button>
-                    </Link>
+                    <button>partners</button>
                   </li>
                   <li>
                     <button>blog</button>
