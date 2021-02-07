@@ -107,16 +107,16 @@ const Footer = () => {
             <div className="social-media d-flex align-items-center justify-content-between pay">
               <li>
                 <a
-                  href="/src/assets/images/datasheet.pdf"
-                  download="datasheet.pdf"
+                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
+                  // download="datasheet.pdf"
                 >
                   <p>Privacy</p>
                 </a>
               </li>
               <li>
                 <a
-                  href="/src/assets/images/datasheet.pdf"
-                  download="datasheet.pdf"
+                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
+                  // download="datasheet-1.jpg"
                 >
                   <p>Terms</p>
                 </a>

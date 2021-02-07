@@ -190,8 +190,8 @@ const Home = () => {
               <br />
               <div>
                 <a
-                  href="/src/assets/images/datasheet.pdf"
-                  download="datasheet.pdf"
+                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
+                  // download="datasheet.pdf"
                 >
                   <Button text="download" className="btn-purple" />
                 </a>
