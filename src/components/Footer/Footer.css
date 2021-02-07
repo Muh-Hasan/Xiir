@@ -35,7 +35,7 @@
 }
 .foot-menu > li {
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 .footer-menu h2 {
   color: #243671;
@@ -81,7 +81,7 @@
   padding: 7px 25px 9px;
   margin-bottom: 5px;
   width: 100%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #243671;
 }
 .footer-form button {
@@ -131,6 +131,7 @@
   cursor: pointer;
   width: 25px;
   height: 25px;
+  margin-left: 5px;
 }
 
 .privacy p {

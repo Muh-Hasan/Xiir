@@ -1,19 +1,17 @@
 import React from "react"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
-// import Footer from '../components/Footer/Footer'
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 import Content from "../components/Content"
+// Data
+import simplifyOversight from "../assets/data/simplifyOversight"
 // Iamges
-import Img from "../images/3.jpg"
-import Analytics from "../images/analytics.png"
-import Case from "../images/case.png"
-import AccOne from "../images/imageAccOne.png"
-import AccTwo from "../images/imageAccTwo.jpg"
-import AccThree from "../images/imageAccThree.png"
-import Like from "../images/like.png"
-import Another from '../images/anotherImg.jpg'
+import Img from "../assets/images/3.jpg"
+import Analytics from "../assets/images/analytics.png"
+import Case from "../assets/images/case.png"
+import Like from "../assets/images/like.png"
+import Another from "../assets/images/anotherImg.jpg"
 import ReactPlayer from "react-player/youtube"
 
 const Home = () => {
@@ -32,7 +30,10 @@ const Home = () => {
               </h3>
               <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
               <div className="btn-div">
-                <Button text="GET AN INSTANT TEST DRIVE" className='btn-purple' />
+                <Button
+                  text="GET AN INSTANT TEST DRIVE"
+                  className="btn-purple"
+                />
               </div>
             </div>
           </div>
@@ -66,21 +67,13 @@ const Home = () => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  <Accordion
-                    title="custom frameworks"
-                    content="Aggregate, automate and manage all your projects that oversight matters."
-                    img={AccOne}
-                  />
-                  <Accordion
-                    title="seamless governace"
-                    content="Streamline your insights to who when it matters with a single click action."
-                    img={AccTwo}
-                  />
-                  <Accordion
-                    title="smart controls"
-                    content="Your intelligent dashborad that superpowers descision-making."
-                    img={AccThree}
-                  />
+                  {simplifyOversight.map((v, i) => (
+                    <Accordion
+                      title={v.title}
+                      content={v.content}
+                      img={v.img}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -99,8 +92,8 @@ const Home = () => {
           <br />
           <div className="div-para">
             <h4>
-              Customised frameworks across the business delivering
-              oversight of your projects  easier, faster and more reliable with better
+              Customised frameworks across the business delivering oversight of
+              your projects easier, faster and more reliable with better
               accountability, transparency and outcomes.
             </h4>
           </div>
@@ -140,15 +133,18 @@ const Home = () => {
                 <div>
                   <Accordion
                     title="Real-time Visibility"
-                    content="Simplify oversights and control for all your projects"/>
+                    content="Simplify oversights and control for all your projects"
+                  />
                   <Accordion
                     title="Supercharge Governance"
-                    content="Communicate to the right people at the right time"/>
-                  
+                    content="Communicate to the right people at the right time"
+                  />
+
                   <Accordion
                     title="Supercharge Governance"
-                    content="Communicate to the right people at the right time"/>
-                  
+                    content="Communicate to the right people at the right time"
+                  />
+
                   <Accordion
                     title="Informed Decision-making"
                     content="Bring all relevant insights to your fingertips"
@@ -193,7 +189,12 @@ const Home = () => {
               </div>
               <br />
               <div>
-                <Button text="download" className='btn-purple' />
+                <a
+                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
+                  download="Xiir Frameworks datasheet.pdf"
+                >
+                  <Button text="download" className="btn-purple" />
+                </a>
               </div>
             </div>
           </div>

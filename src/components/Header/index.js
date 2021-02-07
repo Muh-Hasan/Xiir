@@ -1,14 +1,12 @@
 import React, { useRef } from "react"
 import gsap from "gsap"
 import { Link } from "@reach/router"
-
 // CSS
 import "./Header.css"
-
 // Images
-import Logo from "../../images/xiir.png"
-import Close from "../../images/closeMenu.svg"
-import LogoWhite from '../../images/logoWhite.png'
+import Logo from "../../assets/images/xiir.png"
+import Close from "../../assets/images/closeMenu.svg"
+import LogoWhite from '../../assets/images/logoWhite.png'
 
 const Header = () => {
   const hiddenMenu = useRef(null)

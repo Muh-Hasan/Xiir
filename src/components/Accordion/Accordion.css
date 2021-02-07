@@ -47,7 +47,7 @@
 .accordion__content {
   background-color: white;
   overflow: hidden;
-  /* transition: max-height 0.6s ease; */
+  transition: max-height 0.6s ease;
 }
 .section-padding-2{
   padding-top: 30px;

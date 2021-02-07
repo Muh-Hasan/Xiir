@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
 import Accordion from "../components/Accordion/Accordion"
-import Img from "../images/3.jpg"
+import Img from "../assets/images/3.jpg"
 
 
 const About = () => {
