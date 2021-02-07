@@ -190,8 +190,8 @@ const Home = () => {
               <br />
               <div>
                 <a
-                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
-                  download="Xiir Frameworks datasheet.pdf"
+                  href="/src/assets/images/datasheet.pdf"
+                  download="datasheet.pdf"
                 >
                   <Button text="download" className="btn-purple" />
                 </a>

@@ -107,16 +107,16 @@ const Footer = () => {
             <div className="social-media d-flex align-items-center justify-content-between pay">
               <li>
                 <a
-                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
-                  download="Xiir Frameworks datasheet.pdf"
+                  href="/src/assets/images/datasheet.pdf"
+                  download="datasheet.pdf"
                 >
                   <p>Privacy</p>
                 </a>
               </li>
               <li>
                 <a
-                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
-                  download="Xiir Frameworks datasheet.pdf"
+                  href="/src/assets/images/datasheet.pdf"
+                  download="datasheet.pdf"
                 >
                   <p>Terms</p>
                 </a>
