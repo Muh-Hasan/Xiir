@@ -1,6 +1,10 @@
+.pay li{
+margin-left: 20px;
+}
 .footer-section {
   background-color: #f8f8f8;
   padding-top: 40px;
+  margin-top: 30px;
 }
 .footer-section .footer-top {
   border-bottom: 1px solid #243671;
@@ -25,6 +29,9 @@
 }
 .footer-section .footer-menu {
   max-width: 250px;
+}
+.footer-section .margin-bot{
+  margin-bottom: 7px;
 }
 .foot-menu {
   padding: 0;
@@ -146,9 +153,12 @@
   margin-top: 10px;
 }
 @media (max-width: 767px) {
-  .privacy p {
+  .pay li{
+    margin-left: 10px;
+    }
+  /* .privacy p {
     margin-left: 5px !important;
-  }
+  } */
   .footer-section .col-tagline {
     max-width: 100%;
     width: 100%;

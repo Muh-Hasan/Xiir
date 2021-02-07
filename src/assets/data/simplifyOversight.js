@@ -5,7 +5,7 @@ import AccThree from "../../assets/images/imageAccThree.png"
 const simplifyOversight = [
   {
     title: "custom frameworks",
-    content: "Aggregate, automate and optimse how you manage oversight",
+    content: "Aggregate, automate and optimse how you manage oversight.",
     img: AccOne,
   },
   {

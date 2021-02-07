@@ -213,7 +213,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="section-padding-2">
+      <div className="">
         <Footer />
       </div>
     </div>

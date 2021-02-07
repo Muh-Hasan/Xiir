@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="row justify-content-between ">
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 col-tagline">
-              <div className=" header-icon">
+              <div className="header-icon margin-bot">
                 <Link to="/">
                   <img src={Logo} alt="logo" />
                 </Link>
@@ -104,34 +104,27 @@ const Footer = () => {
                 <img src={Youtube} alt="Youtube" />
               </li>
             </div>
-            <li>
-              <a
-                href="/src/assets/images/Xiir Frameworks datasheet.pdf"
-                download="Xiir Frameworks datasheet.pdf"
-              >
-                <p>Privacy</p>
-              </a>
-            </li>
-            <li>
-              <p> | </p>
-            </li>
-            <li>
-              <a
-                href="/src/assets/images/Xiir Frameworks datasheet.pdf"
-                download="Xiir Frameworks datasheet.pdf"
-              >
-                <p>Terms</p>
-              </a>
-            </li>
-            <li>
-              <p> | </p>
-            </li>
-            <li>
-              <p>Pay </p>
-            </li>
-            <li>
-              <p> | </p>
-            </li>
+            <div className="social-media d-flex align-items-center justify-content-between pay">
+              <li>
+                <a
+                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
+                  download="Xiir Frameworks datasheet.pdf"
+                >
+                  <p>Privacy</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/src/assets/images/Xiir Frameworks datasheet.pdf"
+                  download="Xiir Frameworks datasheet.pdf"
+                >
+                  <p>Terms</p>
+                </a>
+              </li>
+              <li>
+                <p>Pay </p>
+              </li>
+            </div>
             <li>
               <p>© 2021 Xiir</p>
             </li>
