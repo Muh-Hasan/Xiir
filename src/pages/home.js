@@ -21,7 +21,7 @@ const Home = () => {
     <div>
       <Header />
       <section className="banner-section container ">
-        <div className="container img-col">
+        <div className="img-col">
               <img src={Idea} alt="nothing" className="img" />
         </div>
         <div className='d-flex justify-content-center'>
