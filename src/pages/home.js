@@ -12,31 +12,26 @@ import Analytics from "../assets/images/analytics.png"
 import Case from "../assets/images/case.png"
 import Like from "../assets/images/like.png"
 import Another from "../assets/images/anotherImg.jpg"
+import Idea from "../assets/images/Idea.jpg"
+// libs
 import ReactPlayer from "react-player/youtube"
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <section className="banner-section d-flex">
-        <div className="container d-flex flex-column">
-          <div className="row align-items-center justify-content-between content-area">
-            <div className="col-sm-12 col-md-6 col-lg-6 img-col">
-              <img src={Img} alt="nothing" className="img" />
-            </div>
-            <div className="col-sm-12 col-md-5 col-lg-5 text-col">
-              <h3>
-                Senior managers spend way too much time ensuring compliance.
-              </h3>
-              <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
-              <div className="btn-div">
-                <Button
-                  text="GET AN INSTANT TEST DRIVE"
-                  className="btn-purple"
-                />
-              </div>
-            </div>
+      <section className="banner-section container ">
+        <div className="container img-col">
+              <img src={Idea} alt="nothing" className="img" />
+        </div>
+        <div className='d-flex justify-content-center'>
+        <div className="col-sm-12 col-md-5 col-lg-5 text-col">
+          <h3>Senior managers spend way too much time ensuring compliance.</h3>
+          <h1>Xiir Frameworks Drives Oversight In The Fastlane</h1>
+          <div className="btn-div">
+            <Button text="GET AN INSTANT TEST DRIVE" className="btn-purple" />
           </div>
+        </div>
         </div>
       </section>
 
