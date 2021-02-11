@@ -19,7 +19,7 @@ const Home = ({ data }) => {
     allContentfulSimplifyYourOversight,
     allContentfulToggleWithImagesSimplifyYourOversight,
     allContentfulWhyYouShouldTestDriveXiir,
-    allContentfulFrequentlyAskedQuestions
+    allContentfulFrequentlyAskedQuestions,
   } = data
 
   return (
@@ -154,7 +154,7 @@ const Home = ({ data }) => {
                 alt="Analytics"
               />
               <h4>
-                {allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxOneTitle}
+                {allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxTwoTitle}
               </h4>
               <p>
                 {
@@ -194,15 +194,18 @@ const Home = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                {allContentfulFrequentlyAskedQuestions.nodes.slice(0).reverse().map(
-                    (v, i) => (
+                  {allContentfulFrequentlyAskedQuestions.nodes
+                    .slice(0)
+                    .reverse()
+                    .map((v, i) => (
                       <Accordion
                         title={v.title}
-                        content={documentToReactComponents(JSON.parse(v.description.raw))}
+                        content={documentToReactComponents(
+                          JSON.parse(v.description.raw)
+                        )}
                         key={i}
                       />
-                    )
-                  )}
+                    ))}
                 </div>
               </div>
             </div>
@@ -272,6 +275,7 @@ export const qurey = graphql`
         }
       }
     }
+
     allContentfulSimplifyYourOversight {
       nodes {
         descriptionOne {
@@ -288,6 +292,7 @@ export const qurey = graphql`
         }
       }
     }
+
     allContentfulFrequentlyAskedQuestions {
       nodes {
         title
@@ -296,6 +301,7 @@ export const qurey = graphql`
         }
       }
     }
+
     allContentfulToggleWithImagesSimplifyYourOversight {
       nodes {
         tittle
@@ -307,11 +313,12 @@ export const qurey = graphql`
         title
       }
     }
+
     allContentfulWhyYouShouldTestDriveXiir {
       nodes {
         boxOneDescription
-        boxOneTilte
         boxOneTitle
+        boxTwoTitle
         boxTwoDescription
         boxThreeTitle
         title
