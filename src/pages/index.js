@@ -23,6 +23,8 @@ const Home = ({ data }) => {
   const {
     allContentfulLandingPageMain,
     allContentfulSimplifyYourOversight,
+    allContentfulToggleWithImagesSimplifyYourOversight,
+    allContentfulWhyYouShouldTestDriveXiir,
   } = data
 
   return (
@@ -59,11 +61,21 @@ const Home = ({ data }) => {
               <h1>{allContentfulSimplifyYourOversight.nodes[0].heading}</h1>
               <br />
               <h3>
-                {/* {documentToReactComponents(
-                  allContentfulSimplifyYourOversight.nodes[0].descriptionOne.raw
-                )} */}
+                {documentToReactComponents(
+                  JSON.parse(
+                    allContentfulSimplifyYourOversight.nodes[0].descriptionOne
+                      .raw
+                  )
+                )}
               </h3>
-              <h3>and that's why it needs to be made easy for them.</h3>
+              <h3>
+                {documentToReactComponents(
+                  JSON.parse(
+                    allContentfulSimplifyYourOversight.nodes[0].descriptionTwo
+                      .raw
+                  )
+                )}
+              </h3>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-col">
               <img src={Another} alt="nothing" className="img" />
@@ -78,13 +90,16 @@ const Home = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {simplifyOversight.map((v, i) => (
-                    <Accordion
-                      title={v.title}
-                      content={v.content}
-                      img={v.img}
-                    />
-                  ))}
+                  {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
+                    (v, i) => (
+                      <Accordion
+                        title={v.tittle}
+                        content={v.title}
+                        img={v.image.file.url}
+                        key={i}
+                      />
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -98,14 +113,17 @@ const Home = ({ data }) => {
       <section className="xiir-benefits">
         <div className="container">
           <div className="div-head">
-            <h1>why you should test drive Xiir</h1>
+            <h1>{allContentfulWhyYouShouldTestDriveXiir.nodes[0].title}</h1>
           </div>
           <br />
           <div className="div-para">
             <h4>
-              Customised frameworks across the business delivering oversight of
-              your projects easier, faster and more reliable with better
-              accountability, transparency and outcomes.
+              {documentToReactComponents(
+                JSON.parse(
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0].description
+                    .raw
+                )
+              )}
             </h4>
           </div>
         </div>
@@ -116,7 +134,7 @@ const Home = ({ data }) => {
           <div className="d-flex info-boxes-div">
             <div>
               <img src={Case} alt="Case" />
-              <h4>Real-time Visibility</h4>
+              <h4>{allContentfulWhyYouShouldTestDriveXiir.nodes[0]}</h4>
               <p>Simplify oversight and control for all your projects</p>
             </div>
             <div>
