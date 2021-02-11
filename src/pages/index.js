@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 // Components
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
@@ -13,7 +13,7 @@ import Analytics from "../assets/images/analytics.png"
 import Case from "../assets/images/case.png"
 import Like from "../assets/images/like.png"
 import Another from "../assets/images/anotherImg.jpg"
-import Idea from "../assets/images/Idea.jpg"
+// import Idea from "../assets/images/Idea.jpg"
 // libs
 import ReactPlayer from "react-player/youtube"
 import { graphql } from "gatsby"
@@ -59,9 +59,9 @@ const Home = ({ data }) => {
               <h1>{allContentfulSimplifyYourOversight.nodes[0].heading}</h1>
               <br />
               <h3>
-                {documentToReactComponents(
+                {/* {documentToReactComponents(
                   allContentfulSimplifyYourOversight.nodes[0].descriptionOne.raw
-                )}
+                )} */}
               </h3>
               <h3>and that's why it needs to be made easy for them.</h3>
             </div>
@@ -257,6 +257,54 @@ export const qurey = graphql`
         }
         heading
         image {
+          file {
+            url
+          }
+        }
+      }
+    }
+    allContentfulFrequentlyAskedQuestions {
+      nodes {
+        title
+        description {
+          raw
+        }
+      }
+    }
+    allContentfulToggleWithImagesSimplifyYourOversight {
+      nodes {
+        tittle
+        image {
+          file {
+            url
+          }
+        }
+        title
+      }
+    }
+    allContentfulWhyYouShouldTestDriveXiir {
+      nodes {
+        boxOneDescription
+        boxOneTilte
+        boxOneTitle
+        boxTwoDescription
+        boxThreeTitle
+        title
+        description {
+          raw
+        }
+        boxOneImg {
+          file {
+            url
+          }
+        }
+        boxThreeDescription
+        boxThreeImg {
+          file {
+            url
+          }
+        }
+        boxTwoImg {
           file {
             url
           }
