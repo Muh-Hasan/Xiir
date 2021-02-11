@@ -5,13 +5,7 @@ import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 import Content from "../components/Content"
-// Data
-import simplifyOversight from "../assets/data/simplifyOversight"
 // Iamges
-import Img from "../assets/images/3.jpg"
-import Analytics from "../assets/images/analytics.png"
-import Case from "../assets/images/case.png"
-import Like from "../assets/images/like.png"
 import Another from "../assets/images/anotherImg.jpg"
 // import Idea from "../assets/images/Idea.jpg"
 // libs
@@ -25,6 +19,7 @@ const Home = ({ data }) => {
     allContentfulSimplifyYourOversight,
     allContentfulToggleWithImagesSimplifyYourOversight,
     allContentfulWhyYouShouldTestDriveXiir,
+    allContentfulFrequentlyAskedQuestions
   } = data
 
   return (
@@ -93,7 +88,7 @@ const Home = ({ data }) => {
                   {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
                     (v, i) => (
                       <Accordion
-                        title={v.tittle}
+                        title={v.title}
                         content={v.title}
                         img={v.image.file.url}
                         key={i}
@@ -133,19 +128,58 @@ const Home = ({ data }) => {
         <div className="container">
           <div className="d-flex info-boxes-div">
             <div>
-              <img src={Case} alt="Case" />
-              <h4>{allContentfulWhyYouShouldTestDriveXiir.nodes[0]}</h4>
-              <p>Simplify oversight and control for all your projects</p>
+              <img
+                src={
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxOneImg.file
+                    .url
+                }
+                alt="Case"
+              />
+              <h4>
+                {allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxOneTitle}
+              </h4>
+              <p>
+                {
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0]
+                    .boxOneDescription
+                }
+              </p>
             </div>
             <div>
-              <img src={Analytics} alt="Analytics" />
-              <h4>Supercharge Governance</h4>
-              <p>Communicate to the right people at the right time</p>
+              <img
+                src={
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxTwoImg.file
+                    .url
+                }
+                alt="Analytics"
+              />
+              <h4>
+                {allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxOneTitle}
+              </h4>
+              <p>
+                {
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0]
+                    .boxTwoDescription
+                }
+              </p>
             </div>
             <div>
-              <img src={Like} alt="Like" />
-              <h4>Informed Decision-making</h4>
-              <p> Bring all relevant insights to your fingertips</p>
+              <img
+                src={
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxThreeImg
+                    .file.url
+                }
+                alt="Like"
+              />
+              <h4>
+                {allContentfulWhyYouShouldTestDriveXiir.nodes[0].boxThreeTitle}
+              </h4>
+              <p>
+                {
+                  allContentfulWhyYouShouldTestDriveXiir.nodes[0]
+                    .boxThreeDescription
+                }
+              </p>
             </div>
           </div>
         </div>
@@ -160,42 +194,15 @@ const Home = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  <Accordion
-                    title="Real-time Visibility"
-                    content="Simplify oversights and control for all your projects"
-                  />
-                  <Accordion
-                    title="Supercharge Governance"
-                    content="Communicate to the right people at the right time"
-                  />
-
-                  <Accordion
-                    title="Supercharge Governance"
-                    content="Communicate to the right people at the right time"
-                  />
-
-                  <Accordion
-                    title="Informed Decision-making"
-                    content="Bring all relevant insights to your fingertips"
-                  />
-                  <Accordion
-                    title="What is your return policy?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  />
-                  <Accordion
-                    title="How do I track my order?"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  />
-                  <Accordion
-                    title="Can I purchase items again?"
-                    content="
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              "
-                  />
+                {allContentfulFrequentlyAskedQuestions.nodes.slice(0).reverse().map(
+                    (v, i) => (
+                      <Accordion
+                        title={v.title}
+                        content={documentToReactComponents(JSON.parse(v.description.raw))}
+                        key={i}
+                      />
+                    )
+                  )}
                 </div>
               </div>
             </div>
