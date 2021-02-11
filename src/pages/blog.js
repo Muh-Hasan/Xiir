@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-const Blog = () => {
-    // console.log(data);
+const Blog = ({ data }) => {
+    console.log(data);
     return (
         <div>
            <h1>this is blog page</h1> 
@@ -10,6 +10,34 @@ const Blog = () => {
 }
 
 export default Blog
+
+export const qurey = graphql`
+  query {
+    allContentfulLandingPageMain {
+      nodes {
+        mainHeading
+        buttonText
+        sideHeading
+        image {
+          file {
+            url
+          }
+        }
+      }
+    }
+    allContentfulContentArea {
+    nodes {
+      textMainHeading
+      textMainOne
+      textMainTwo
+      textPointThree
+      textPointsOne
+      textPointsTwo
+      textSideOne
+    }
+  }
+  }
+`
 
 // export const qurey = graphql`
 // query{

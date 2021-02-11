@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react"
+import { graphql } from "gatsby"
 
-const Content = () => {
-    return (
-        <>
-         <section className="atelier-options change-header tr-bg">
+const Content = ({ data }) => {
+  console.log(data)
+  return (
+    <>
+      <section className="atelier-options change-header tr-bg">
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  content-lines">
@@ -49,9 +51,25 @@ const Content = () => {
             <br />
           </div>
         </div>
-      </section>   
-        </>
-    )
+      </section>
+    </>
+  )
 }
 
 export default Content
+
+export const qurey = graphql`
+  query {
+    allContentfulContentArea {
+      nodes {
+        textMainHeading
+        textMainOne
+        textMainTwo
+        textPointThree
+        textPointsOne
+        textPointsTwo
+        textSideOne
+      }
+    }
+  }
+`
