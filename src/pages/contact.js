@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
 import { graphql } from "gatsby"
+import Button from "../components/Button"
 const Contact = ({ data }) => {
   const { allContentfulContactPage } = data
 
@@ -52,6 +53,7 @@ const Contact = ({ data }) => {
                   <label className="sr-only">Full name</label>
                   <textarea placeholder="FULL NAME" />
                 </div>
+                <Button text="submit" className="btn-purple" />
               </div>
             </div>
           </div>
