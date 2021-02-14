@@ -303,6 +303,7 @@
 }
 .contact-info {
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .contact-info div {
   margin-bottom: 10px;

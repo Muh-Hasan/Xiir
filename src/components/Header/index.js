@@ -6,7 +6,7 @@ import "./Header.css"
 // Images
 import Logo from "../../assets/images/xiir.png"
 import Close from "../../assets/images/closeMenu.svg"
-import LogoWhite from '../../assets/images/logoWhite.png'
+import LogoWhite from "../../assets/images/logoWhite.png"
 
 const Header = () => {
   const hiddenMenu = useRef(null)
@@ -76,7 +76,9 @@ const Header = () => {
                     <button>blog</button>
                   </li>
                   <li>
-                    <button>contact</button>
+                    <Link to="/contact">
+                      <button>contact</button>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -84,8 +86,12 @@ const Header = () => {
                 <div className="col menu-tagline">
                   <h2>get smart with oversight</h2>
                 </div>
-                <div className='col menu-footer-login d-md-block'>
-                  <h2><a href='https://xiir.com/' target='blank'>Login</a></h2>
+                <div className="col menu-footer-login d-md-block">
+                  <h2>
+                    <a href="https://xiir.com/" target="blank">
+                      Login
+                    </a>
+                  </h2>
                 </div>
               </div>
             </div>

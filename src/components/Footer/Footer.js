@@ -59,7 +59,9 @@ const Footer = () => {
                   <button className="foot-btn">blog</button>
                 </li>
                 <li>
-                  <button className="foot-btn">contact</button>
+                  <Link to="/contact">
+                    <button className="foot-btn">contact</button>
+                  </Link>
                 </li>
               </ul>
             </div>
