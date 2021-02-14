@@ -88,7 +88,7 @@ const Home = ({ data }) => {
                   {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
                     (v, i) => (
                       <Accordion
-                        title={v.title}
+                        title={v.tittle}
                         content={v.title}
                         img={v.image.file.url}
                         key={i}
