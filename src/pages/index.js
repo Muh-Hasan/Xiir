@@ -84,18 +84,16 @@ const Home = ({ data }) => {
           <div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div>
-                  {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
-                    (v, i) => (
-                      <Accordion
-                        title={v.tittle}
-                        content={v.title}
-                        img={v.image.file.url}
-                        key={i}
-                      />
-                    )
-                  )}
-                </div>
+                {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
+                  (v, i) => (
+                    <Accordion
+                      title={v.tittle}
+                      content={v.title}
+                      img={v.image.file.url}
+                      key={i}
+                    />
+                  )
+                )}
               </div>
             </div>
           </div>
