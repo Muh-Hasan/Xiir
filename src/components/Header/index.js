@@ -72,7 +72,9 @@ const Header = () => {
                     <button>services</button>
                   </li>
                   <li>
-                    <button>partners</button>
+                    <Link to="/partners">
+                      <button>partners</button>
+                    </Link>
                   </li>
                   <li>
                     <button>blog</button>

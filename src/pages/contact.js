@@ -27,13 +27,6 @@ const Contact = ({ data }) => {
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 row align-items-center">
                   <img
-                    src={allContentfulContactPage.nodes[0].phoneIcon.file.url}
-                    alt={allContentfulContactPage.nodes[0].headQuartersNum}
-                  />
-                  <h5>{allContentfulContactPage.nodes[0].headQuartersNum}</h5>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 row align-items-center">
-                  <img
                     src={allContentfulContactPage.nodes[0].emailIcon.file.url}
                     alt={allContentfulContactPage.nodes[0].tagline}
                   />
