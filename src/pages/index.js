@@ -20,6 +20,7 @@ const Home = ({ data }) => {
     allContentfulToggleWithImagesSimplifyYourOversight,
     allContentfulWhyYouShouldTestDriveXiir,
     allContentfulFrequentlyAskedQuestions,
+    allContentfulContentArea,
   } = data
 
   return (
@@ -47,7 +48,15 @@ const Home = ({ data }) => {
         </div>
       </section>
 
-      <Content />
+      <Content
+        pOne={allContentfulContentArea.nodes[0].textPointsOne}
+        pTwo={allContentfulContentArea.nodes[0].textPointsTwo}
+        pThree={allContentfulContentArea.nodes[0].textPointThree}
+        Heading={allContentfulContentArea.nodes[0].textMainHeading}
+        sideOne={allContentfulContentArea.nodes[0].textMainOne}
+        sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
+        smallOne={allContentfulContentArea.nodes[0].textSideOne}
+      />
 
       <section className="d-flex section-padding-2">
         <div className="container d-flex flex-column">
@@ -226,10 +235,7 @@ const Home = ({ data }) => {
               </div>
               <br />
               <div>
-                <a
-                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
-                  // download="datasheet.pdf"
-                >
+                <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
                   <Button text="download" className="btn-purple" />
                 </a>
               </div>
@@ -339,6 +345,18 @@ export const qurey = graphql`
             url
           }
         }
+      }
+    }
+
+    allContentfulContentArea {
+      nodes {
+        textMainHeading
+        textMainOne
+        textMainTwo
+        textPointThree
+        textPointsOne
+        textPointsTwo
+        textSideOne
       }
     }
   }

@@ -1,24 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
 
-const Content = ({ data }) => {
-  console.log(data)
+const Content = ({
+  pOne,
+  pTwo,
+  pThree,
+  Heading,
+  sideOne,
+  sideTwo,
+  smallOne,
+}) => {
   return (
     <>
       <section className="atelier-options change-header tr-bg">
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  content-lines">
-              <h1>
-                Our senior managers deserve something that saves their time and
-                mind space
-              </h1>
+              <h1>{sideOne}</h1>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-lines">
-              <h3>
-                Companies want compliance managed impeccably, but without their
-                senior managers having to spend considerable effort on it.
-              </h3>
+              <h3>{smallOne}</h3>
             </div>
           </div>
         </div>
@@ -28,25 +28,14 @@ const Content = ({ data }) => {
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  content-lines">
-              <h1 className="h1-one">Manual processes no longer work</h1>
+              <h1 className="h1-one">{Heading}</h1>
               <br />
-              <h1 className="h1-two">
-                Emails are taking up way more time than you realise
-              </h1>
+              <h1 className="h1-two">{sideTwo}</h1>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-lines">
-              <h3 className="h3-one">
-                Not intuitive enough, especially when we consider working from
-                home.
-              </h3>
-              <h3 className="h3-one">
-                Counterproductive and frustrating: takes time away from actual
-                tasks.
-              </h3>
-              <h3 className="h3-one">
-                Senior managers need better tools to juggle between so many
-                responsibilities.
-              </h3>
+              <h3 className="h3-one">{pOne}</h3>
+              <h3 className="h3-one">{pTwo}</h3>
+              <h3 className="h3-one">{pThree}</h3>
             </div>
             <br />
           </div>
@@ -58,18 +47,8 @@ const Content = ({ data }) => {
 
 export default Content
 
-export const qurey = graphql`
-  query {
-    allContentfulContentArea {
-      nodes {
-        textMainHeading
-        textMainOne
-        textMainTwo
-        textPointThree
-        textPointsOne
-        textPointsTwo
-        textSideOne
-      }
-    }
-  }
-`
+// export const qurey = graphql`
+//   query {
+
+//   }
+// `
