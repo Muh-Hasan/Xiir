@@ -312,7 +312,13 @@
   color: #243671;
   margin-left: 10px;
 }
-
+.contact-section .gif {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.contact-section .gif img {
+  max-height: 167px;
+}
 /* test drive */
 .img-test {
   text-align: center;

@@ -14,11 +14,10 @@ const Contact = ({ data }) => {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6 contact-tagline">
               <h3>contact</h3>
-
               <div>
                 <h2>{allContentfulContactPage.nodes[0].tagline}</h2>
               </div>
-              <div className="row contact-info">
+              <div className="row contact-info container">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 row align-items-center">
                   <img
                     src={allContentfulContactPage.nodes[0].phoneIcon.file.url}
@@ -40,6 +39,12 @@ const Contact = ({ data }) => {
                   />
                   <h5>{allContentfulContactPage.nodes[0].email}</h5>
                 </div>
+              </div>
+              <div className="gif">
+                <img
+                  src={allContentfulContactPage.nodes[0].gif.file.url}
+                  alt="gif"
+                />
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 contct-form-area">
@@ -85,6 +90,11 @@ export const query = graphql`
           }
         }
         emailIcon {
+          file {
+            url
+          }
+        }
+        gif {
           file {
             url
           }
