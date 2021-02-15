@@ -47,7 +47,9 @@ const Footer = () => {
               <h2>Menu</h2>
               <ul className="foot-menu">
                 <li>
+                <Link to="/testDrive">
                   <button className="foot-btn">test drive</button>
+                  </Link>
                 </li>
                 <li>
                   <button className="foot-btn">services</button>

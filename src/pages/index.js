@@ -82,7 +82,11 @@ const Home = ({ data }) => {
               </h3>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-col">
-              <img src={Another} alt="nothing" className="img" />
+              <img
+                src={allContentfulSimplifyYourOversight.nodes[0].image.file.url}
+                alt="nothing"
+                className="img"
+              />
             </div>
           </div>
         </div>

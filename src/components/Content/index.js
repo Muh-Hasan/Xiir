@@ -46,9 +46,3 @@ const Content = ({
 }
 
 export default Content
-
-// export const qurey = graphql`
-//   query {
-
-//   }
-// `

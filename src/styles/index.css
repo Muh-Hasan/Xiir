@@ -313,6 +313,19 @@
   margin-left: 10px;
 }
 
+/* test drive */
+.img-test {
+  text-align: center;
+}
+.img-test img {
+  max-width: 550px;
+  width: 100%;
+  padding: 0% 0 0 12%;
+}
+.section-padding-4 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
 @media (max-width: 767px) {
   .banner-section {
     padding-bottom: 65px;
