@@ -14,6 +14,7 @@ const Pay = ({ data }) => {
         <div className="container  d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
             <div className=" col-sm-12 col-md-5 col-lg-5 text-col">
+              <h1>Pay</h1>
               <h1>{allContentfulPayPage.nodes[0].title}</h1>
               <h3>
                 {documentToReactComponents(
