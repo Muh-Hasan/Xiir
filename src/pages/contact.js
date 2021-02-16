@@ -13,7 +13,7 @@ const Contact = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6 contact-tagline">
-              <h3>contact</h3>
+              <h3 className='headings-of-all'>contact</h3>
               <div>
                 <h2>{allContentfulContactPage.nodes[0].tagline}</h2>
               </div>

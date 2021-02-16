@@ -364,6 +364,14 @@
 .gr-bg {
   background-color: #3e812c;
 }
+
+
+.headings-of-all{
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+}
 @media (max-width: 767px) {
   .banner-section {
     padding-bottom: 65px;
