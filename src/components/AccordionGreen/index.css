@@ -1,9 +1,9 @@
-.card {
-    border-color: #3e812c;
+.cardGreen {
+    /* border-color: #3e812c; */
     border-radius: 0 !important;
-    border-width: 2px;
+    border: 2px solid #3e812c !important;
   }
-  .card-header {
+  .card-headerGreen {
     border-color: #3e812c;
     border-bottom: none;
     box-shadow: none;
@@ -11,7 +11,7 @@
     background: transparent;
     margin-bottom: -1px;
   }
-  .card-header h2 {
+  .card-headerGreen h2 {
     color: #3e812c;
     font-size: 16px;
     line-height: 21px;
@@ -28,12 +28,12 @@
     background-color: white;
     min-height: 60px;
   }
-  .card-header h2 span {
+  .card-headerGreen h2 span {
     width: calc(100% - 50px);
   }
   
-  .card-header,
-  .active h2 {
+  .card-headerGreen,
+  .activeGreen h2 {
     background: #3e812c !important;
     color: white;
   }

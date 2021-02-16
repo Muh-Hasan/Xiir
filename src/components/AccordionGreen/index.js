@@ -18,8 +18,8 @@ function AccordionGreen({ content, title, img }) {
   }
 
   return (
-    <div className="card">
-      <div className={`card-header ${active ? "active" : ""}`}>
+    <div className="cardGreen">
+      <div className={`card-headerGreen ${active ? "activeGreen" : ""}`}>
         <h2 className="mb-0 collapsed" onClick={toggleAccordion}>
           <span>{title}</span>
           <p className="accordion__icon">{showMinus ? "-" : "+"}</p>
