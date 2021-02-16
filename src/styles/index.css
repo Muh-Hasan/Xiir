@@ -332,6 +332,31 @@
   padding-top: 80px;
   padding-bottom: 50px;
 }
+/* pay */
+.contct-form-area .checkbox {
+  height: 20px;
+  width: 20px;
+}
+.pay-input-div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.pay-input-div p {
+  margin-left: 25px;
+}
+.pay-input-div p span {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.pay-input-div .with-color {
+  color: #243671;
+  cursor: pointer;
+  font-weight: 600;
+}
+.pay-btn{
+  margin-bottom: 40px;
+}
 @media (max-width: 767px) {
   .banner-section {
     padding-bottom: 65px;

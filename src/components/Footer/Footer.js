@@ -112,23 +112,19 @@ const Footer = () => {
             </div>
             <div className="social-media d-flex align-items-center justify-content-between pay">
               <li>
-                <a
-                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
-                  // download="datasheet.pdf"
-                >
+                <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
                   <p>Privacy</p>
                 </a>
               </li>
               <li>
-                <a
-                  href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
-                  // download="datasheet-1.jpg"
-                >
+                <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
                   <p>Terms</p>
                 </a>
               </li>
               <li>
-                <p>Pay </p>
+                <Link to="/pay">
+                  <p>Pay </p>
+                </Link>
               </li>
             </div>
             <li>
