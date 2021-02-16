@@ -14,7 +14,7 @@ const Pay = ({ data }) => {
         <div className="container  d-flex flex-column">
           <div className="row align-items-center justify-content-between content-area">
             <div className=" col-sm-12 col-md-5 col-lg-5 text-col">
-              <h1 className='headings-of-all'>Pay</h1>
+              <h1 className="headings-of-all">Pay</h1>
               <h1>{allContentfulPayPage.nodes[0].title}</h1>
               <h3>
                 {documentToReactComponents(
@@ -26,6 +26,12 @@ const Pay = ({ data }) => {
                   <Button text="contact" className="btn-purple" />
                 </Link>
               </div>
+              <div className='pay-stripe'>
+                <img
+                  src={allContentfulPayPage.nodes[0].image.file.url}
+                  alt="stripe"
+                />
+              </div>
             </div>
             <div className=" col-sm-12 col-md-6 col-lg-6 contct-form-area">
               <div>
@@ -34,10 +40,10 @@ const Pay = ({ data }) => {
                   <input placeholder="Amount" />
                 </div>
                 <div className="d-flex pay-input-div container">
-                  <input type="checkbox" className='checkbox' />
+                  <input type="checkbox" className="checkbox" />
                   <p>
                     <span> I accept </span>
-                    <span className='with-color'>Terms of use</span>
+                    <span className="with-color">Terms of use</span>
                   </p>
                 </div>
                 <div className="footer-form">
@@ -63,6 +69,11 @@ export const qurey = graphql`
           raw
         }
         title
+        image {
+          file {
+            url
+          }
+        }
       }
     }
   }
