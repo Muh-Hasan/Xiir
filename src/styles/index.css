@@ -319,6 +319,9 @@
 .contact-section .gif img {
   max-height: 167px;
 }
+.contact-mat{
+  padding-top: 0;
+}
 /* test drive */
 .img-test {
   text-align: center;
