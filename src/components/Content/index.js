@@ -8,10 +8,11 @@ const Content = ({
   sideOne,
   sideTwo,
   smallOne,
+  className
 }) => {
   return (
     <>
-      <section className="atelier-options change-header tr-bg">
+      <section className={`atelier-options change-header tr-bg ${className}`}>
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  content-lines">

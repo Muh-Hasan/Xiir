@@ -319,7 +319,7 @@
 .contact-section .gif img {
   max-height: 167px;
 }
-.contact-mat{
+.contact-mat {
   padding-top: 0;
 }
 /* test drive */
@@ -357,8 +357,12 @@
   cursor: pointer;
   font-weight: 600;
 }
-.pay-btn{
+.pay-btn {
   margin-bottom: 40px;
+}
+/* partners */
+.gr-bg {
+  background-color: #3e812c;
 }
 @media (max-width: 767px) {
   .banner-section {
