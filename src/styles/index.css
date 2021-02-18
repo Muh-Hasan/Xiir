@@ -336,6 +336,10 @@
   padding-bottom: 50px;
 }
 /* pay */
+.pay-padding{
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
 .contct-form-area .checkbox {
   height: 20px;
   width: 20px;
@@ -371,7 +375,9 @@
 .gr-bg {
   background-color: #3e812c;
 }
-
+.teal-bg{
+  background-color: #005a6c  !important;
+}
 
 .headings-of-all{
   font-size: 50px !important;
@@ -389,5 +395,8 @@
   }
   .header-icon img {
     max-width: 60px;
+  }
+  .pay-padding{
+    padding-top: 150px;
   }
 }

@@ -1,12 +1,12 @@
 import React from "react"
 // Components
 import Header from "../components/Header"
-import Accordion from "../components/Accordion/Accordion"
+import AccordionTeal from "../components/AccordionTeal"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 import Content from "../components/Content"
 // Iamges
-import Another from "../assets/images/anotherImg.jpg"
+// import Another from "../assets/images/anotherImg.jpg"
 // import Idea from "../assets/images/Idea.jpg"
 // libs
 import ReactPlayer from "react-player/youtube"
@@ -56,6 +56,7 @@ const Home = ({ data }) => {
         sideOne={allContentfulContentArea.nodes[0].textMainOne}
         sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
         smallOne={allContentfulContentArea.nodes[0].textSideOne}
+        className='teal-bg'
       />
 
       <section className="d-flex section-padding-2">
@@ -99,7 +100,7 @@ const Home = ({ data }) => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
                   (v, i) => (
-                    <Accordion
+                    <AccordionTeal
                       title={v.tittle}
                       content={v.title}
                       img={v.image.file.url}
@@ -209,7 +210,7 @@ const Home = ({ data }) => {
                     .slice(0)
                     .reverse()
                     .map((v, i) => (
-                      <Accordion
+                      <AccordionTeal
                         title={v.title}
                         content={documentToReactComponents(
                           JSON.parse(v.description.raw)
