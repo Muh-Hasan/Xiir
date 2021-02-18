@@ -378,7 +378,40 @@
 .teal-bg{
   background-color: #005a6c  !important;
 }
-
+/* ser */
+.ser-img img{
+max-width: 550px;
+}
+.ser-acc-padding{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.ser-slider{
+  padding-bottom: 30px;
+}
+.ser-slider marquee{
+  background: #243671;
+  color: white;
+  font-size: 22px;
+  letter-spacing: .5px;
+  min-height: 30px;
+}
+.ser-slider p{
+margin-top: 10px;
+}
+.ser-head-2{
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.ser-img-2 img{
+ max-width: 550px;
+}
+.ser-padding-btn{
+  padding-bottom: 30px;
+}
 .headings-of-all{
   font-size: 50px !important;
   font-weight: 700 !important;
@@ -399,4 +432,9 @@
   .pay-padding{
     padding-top: 150px;
   }
+}
+@media (max-width: 500px){
+  .ser-img-2 img{
+    max-width: 350px;
+   } 
 }
