@@ -449,6 +449,10 @@
   margin-bottom: 20px !important;
   color: #243671;
 }
+.section-padding-blog{
+  padding-top: 150px;
+  padding-bottom: 20px;
+}
 @media (max-width: 767px) {
   .banner-section {
     padding-bottom: 65px;

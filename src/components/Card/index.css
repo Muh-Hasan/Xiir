@@ -1,0 +1,36 @@
+.blogCard {
+  max-width: 550px;
+  margin-bottom: 100px;
+}
+.blogCard:hover {
+  transform: scale(1.01, 1.01);
+  cursor: pointer;
+}
+.blogCard img {
+  max-width: 550px;
+}
+.blogCard .blog-des {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+  width: 100%;
+}
+.blogCard .blog-des h1,
+.blogCard .blog-des h4 {
+  color: black !important;
+}
+.blogCard .blog-des h1 {
+  font-weight: 600;
+  font-size: 35px;
+}
+@media (max-width: 767px) {
+  .blogCard {
+    max-width: 300px;
+  }
+  .blogCard img {
+    max-width: 300px;
+  }
+  .blogCard .blog-des h1 {
+    font-size: 25px;
+  }
+}
