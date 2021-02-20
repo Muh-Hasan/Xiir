@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql , Link } from "gatsby"
 import Card from "../components/Card"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
@@ -15,12 +15,14 @@ const Blog = ({ data }) => {
         <div className="container">
           <div className="row justify-content-center container">
             {allContentfulBlog.nodes.map((v, i) => (
-              <Card
-                img={v.img.file.url}
-                title={v.title}
-                description={v.blogSummary}
-                key={i}
-              />
+              <Link to={`/blog/${v.title}`}>
+                <Card
+                  img={v.img.file.url}
+                  title={v.title}
+                  description={v.blogSummary}
+                  key={i}
+                />
+              </Link>
             ))}
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import "./index.css"
 const Card = ({ img, title, description }) => {
   return (
@@ -8,10 +7,8 @@ const Card = ({ img, title, description }) => {
         <img src={img} alt={title} />
       </div>
       <div className="blog-des container">
-        <Link to={`/blog/${title}`}>
           <h1>{title}</h1>
           <h4>{description}</h4>
-        </Link>
       </div>
     </div>
   )

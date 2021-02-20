@@ -3,29 +3,29 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allContentfulBlog {
-        nodes {
-          blogSummary
-          title
-          img {
-            file {
-              url
+        allContentfulBlog {
+            edges {
+              node {
+                blogDetail {
+                  raw
+                }
+                img {
+                  file {
+                    url
+                  }
+                }
+                title
+              }
             }
           }
-          blogDetail {
-            raw
-          }
-        }
-      }
     }
   `)
-  result.data.allContentfulBlog.nodes.forEach(item => {
-    console.log(item);
+  result.data.allContentfulBlog.edges.forEach(item => {
     createPage({
-      path: `/blog/${item.title}`,
-      component: path.resolve("./src/temp/index.js"),
+      path: `/blog/${item.node.title}`,
+      component: path.resolve(`./src/blog/index.js`),
       context: {
-        data: item,
+        data: item.node,
       },
     })
   })
