@@ -4,7 +4,8 @@ const TempBlog = ({ pageContext: { data } }) => {
     console.log(data);
     return (
         <div>
-            
+            hellpo
+            wignigfinfffnfofneoneoneoneoneoenoeneni
         </div>
     )
 }
