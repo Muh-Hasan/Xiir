@@ -1,59 +1,40 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react"
+import { graphql } from "gatsby"
+import Card from "../components/Card"
 const Blog = ({ data }) => {
-    console.log(data);
-    return (
-        <div>
-           <h1>this is blog page</h1> 
+  const { allContentfulBlog } = data
+  return (
+    <div>
+      <h1>this is blog page</h1>
+      <div className="container">
+        <div className="row justify-content-center container">
+          {allContentfulBlog.nodes.map((v, i) => (
+            <Card
+              img={v.img.file.url}
+              title={v.title}
+              description={v.blogSummary}
+              key={i}
+            />
+          ))}
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Blog
-
 export const qurey = graphql`
   query {
-    allContentfulLandingPageMain {
+    allContentfulBlog {
       nodes {
-        mainHeading
-        buttonText
-        sideHeading
-        image {
+        blogSummary
+        title
+        img {
           file {
             url
           }
         }
       }
     }
-    allContentfulContentArea {
-    nodes {
-      textMainHeading
-      textMainOne
-      textMainTwo
-      textPointThree
-      textPointsOne
-      textPointsTwo
-      textSideOne
-    }
-  }
   }
 `
-
-// export const qurey = graphql`
-// query{
-//   allContentfulFoconor {
-//     nodes {
-//       description {
-//         raw
-//       }
-//       date
-//       title
-//       image {
-//         file {
-//           url
-//         }
-//       }
-//     }
-//   }
-// }
-// `
