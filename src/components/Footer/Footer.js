@@ -66,7 +66,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <button className="foot-btn">services</button>
+                  <Link to="/services">
+                    <button className="foot-btn">services</button>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/partners">
@@ -74,7 +76,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <button className="foot-btn">blog</button>
+                  <Link to="/blog">
+                    <button className="foot-btn">blog</button>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/contact">
