@@ -336,7 +336,7 @@
   padding-bottom: 50px;
 }
 /* pay */
-.pay-padding{
+.pay-padding {
   padding-top: 200px;
   padding-bottom: 100px;
 }
@@ -364,59 +364,61 @@
 .pay-btn {
   margin-bottom: 40px;
 }
-.pay-stripe{
+.pay-stripe {
   margin-top: 30px;
   margin-bottom: 40px;
 }
-.pay-stripe img{
+.pay-stripe img {
   height: 50px;
 }
 /* partners */
 .gr-bg {
   background-color: #3e812c;
 }
-.teal-bg{
-  background-color: #005a6c  !important;
+.teal-bg {
+  background-color: #005a6c !important;
 }
 /* ser */
-.ser-img img{
-max-width: 550px;
+.ser-img img {
+  max-width: 550px;
 }
-.ser-acc-padding{
+.ser-acc-padding {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.ser-slider{
+.ser-slider {
   padding-bottom: 30px;
 }
-.ser-slider marquee{
+.ser-slider marquee {
   background: #243671;
   color: white;
   font-size: 22px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   min-height: 30px;
 }
-.ser-slider p{
-margin-top: 10px;
+.ser-slider p {
+  margin-top: 10px;
 }
-.ser-head-2{
+.ser-head-2 {
   margin-top: 30px;
   font-size: 25px;
+  color: #243671;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
-.ser-img-2 img{
- max-width: 550px;
+.ser-img-2 img {
+  max-width: 550px;
 }
-.ser-padding-btn{
+.ser-padding-btn {
   padding-bottom: 30px;
 }
-.headings-of-all{
+.headings-of-all {
   font-size: 50px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   margin-bottom: 20px !important;
+  color: #243671;
 }
 @media (max-width: 767px) {
   .banner-section {
@@ -429,12 +431,12 @@ margin-top: 10px;
   .header-icon img {
     max-width: 60px;
   }
-  .pay-padding{
+  .pay-padding {
     padding-top: 150px;
   }
 }
-@media (max-width: 500px){
-  .ser-img-2 img{
+@media (max-width: 500px) {
+  .ser-img-2 img {
     max-width: 350px;
-   } 
+  }
 }

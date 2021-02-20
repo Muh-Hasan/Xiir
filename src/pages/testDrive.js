@@ -5,74 +5,120 @@ import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const TestDrive = ({ data }) => {
-  const {
-    allContentfulToggleWithImagesSimplifyYourOversight,
-    allContentfulContentArea,
-    allContentfulTestDriveLanding,
-  } = data
+  const { allContentfulTestDrive, allContentfulFrequentlyAskedQuestions } = data
   return (
     <div>
       <Header />
-
-      <section className="banner-section d-flex">
-        <div className="container  d-flex flex-column">
-          <div className="row align-items-center justify-content-between content-area">
-            <div className=" col-sm-12 col-md-6 col-lg-6 img-test">
-              <img
-                src={allContentfulTestDriveLanding.nodes[0].image.file.url}
-                alt="nothing"
-                className="img"
-              />
-            </div>
-            <div className=" col-sm-12 col-md-5 col-lg-5 text-col">
-              <h1>{allContentfulTestDriveLanding.nodes[0].title}</h1>
-              <h3>{allContentfulTestDriveLanding.nodes[0].description}</h3>
-              <div className="btn-div">
-                <Button
-                  text={allContentfulTestDriveLanding.nodes[0].buttonText}
-                  className="btn-purple"
-                />
-              </div>
-            </div>
+      <section className="xiir-benefits contact-section">
+        <div className="container">
+          <div className="div-head">
+            <h3 className="headings-of-all">Test Drive</h3>
+            <h3 className="ser-head-2">
+              {allContentfulTestDrive.nodes[0].title}
+            </h3>
+          </div>
+          <br />
+          <div className="div-para">
+            <h4>{allContentfulTestDrive.nodes[0].description}</h4>
           </div>
         </div>
       </section>
-
-      <Content
-        pOne={allContentfulContentArea.nodes[0].textPointsOne}
-        pTwo={allContentfulContentArea.nodes[0].textPointsTwo}
-        pThree={allContentfulContentArea.nodes[0].textPointThree}
-        Heading={allContentfulContentArea.nodes[0].textMainHeading}
-        sideOne={allContentfulContentArea.nodes[0].textMainOne}
-        sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
-        smallOne={allContentfulContentArea.nodes[0].textSideOne}
-      />
-
-      <section className="section-padding-4">
+      <section>
+        <div className='container '>
+          <div className='d-flex '>
+          <div className='col-sm-12 col-md-6 col-lg-6'>
+            <img src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url} alt='img-1' />
+            <button>Buy</button>
+          </div>
+          <div className='col-sm-12 col-md-6 col-lg-6'>
+            <img src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url} alt='img-1' />
+            <button>Buy</button>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-padding d-flex">
         <div className="container">
+          <div className="faq">
+            <h1>frequently asked questions</h1>
+          </div>
           <div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
-                  (v, i) => (
-                    <Accordion
-                      title={v.tittle}
-                      content={v.title}
-                      img={v.image.file.url}
-                      key={i}
-                    />
-                  )
-                )}
+                <div>
+                  {allContentfulFrequentlyAskedQuestions.nodes
+                    .slice(0)
+                    .reverse()
+                    .map((v, i) => (
+                      <Accordion
+                        title={v.title}
+                        content={documentToReactComponents(
+                          JSON.parse(v.description.raw)
+                        )}
+                        key={i}
+                      />
+                    ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="text-center section-padding">
-        <Button text="let's talk" className="btn-purple" />
+      <section className="xiir-benefits">
+        <div className="container">
+          <div className="div-head">
+            <h3 className="ser-head-2">
+              {allContentfulTestDrive.nodes[0].title}
+            </h3>
+          </div>
+          <br />
+          <div className="div-para">
+            <h4>{allContentfulTestDrive.nodes[0].description}</h4>
+          </div>
+        </div>
+      </section>
+
+      <section className="xiir-benefits">
+        <div className="container">
+          <div className="div-head">
+            <h3 className="ser-head-2">
+              {allContentfulTestDrive.nodes[0].subTitle}
+            </h3>
+          </div>
+          <br />
+          <div className="div-para">
+            <h4>{allContentfulTestDrive.nodes[0].subDescription}</h4>
+          </div>
+        </div>
+      </section>
+      <div className="text-center ser-img-2">
+        <img
+          src={allContentfulTestDrive.nodes[0].image.file.url}
+          alt="ser-2"
+        />
       </div>
+      <section className="download-box section-padding">
+        <div className="container">
+        <div className="our-media">
+            <h1>{allContentfulTestDrive.nodes[0].subText}</h1>
+          </div>
+          <div className="box ">
+            <div className=" datasheet-down">
+              <div className="input">
+                <input placeholder="your full name" />
+                <input placeholder="please enter a valid business email" />
+              </div>
+              <br />
+              <div>
+                  <Button text="submit" className="btn-purple" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   )
@@ -82,11 +128,23 @@ export default TestDrive
 
 export const qurey = graphql`
   query {
-    allContentfulTestDriveLanding {
+    allContentfulTestDrive {
       nodes {
         title
+        subTitle
+        subText
+        subDescription
         description
-        buttonText
+        imgPlanTwo {
+          file {
+            url
+          }
+        }
+        imgPlanOne {
+          file {
+            url
+          }
+        }
         image {
           file {
             url
@@ -94,28 +152,12 @@ export const qurey = graphql`
         }
       }
     }
-
-    allContentfulToggleWithImagesSimplifyYourOversight {
+    allContentfulFrequentlyAskedQuestions {
       nodes {
-        tittle
-        image {
-          file {
-            url
-          }
-        }
         title
-      }
-    }
-
-    allContentfulContentArea {
-      nodes {
-        textMainHeading
-        textMainOne
-        textMainTwo
-        textPointThree
-        textPointsOne
-        textPointsTwo
-        textSideOne
+        description {
+          raw
+        }
       }
     }
   }

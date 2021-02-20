@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql , Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
@@ -60,7 +60,7 @@ const Services = ({ data }) => {
           </div>
         </div>
       </section>
-      <div className='ser-slider'>
+      <div className="ser-slider">
         <marquee>
           {documentToReactComponents(
             JSON.parse(allContentfulServices.nodes[0].sliderText.raw)
@@ -72,7 +72,9 @@ const Services = ({ data }) => {
         <div className="container">
           <div className="div-head">
             <h1>{allContentfulServices.nodes[0].titleOne}</h1>
-            <h3 className='ser-head-2'>{allContentfulServices.nodes[0].sideTitle}</h3>
+            <h3 className="ser-head-2">
+              {allContentfulServices.nodes[0].sideTitle}
+            </h3>
           </div>
           <br />
           <div className="div-para">
@@ -81,16 +83,16 @@ const Services = ({ data }) => {
         </div>
       </section>
 
-      <div className='text-center ser-img-2'>
+      <div className="text-center ser-img-2">
         <img
           src={allContentfulServices.nodes[0].imagePlan.file.url}
           alt="ser-2"
         />
       </div>
       <div className="container ser-padding-btn">
-          <Link to='/testDrive'>
-        <Button text="let's arrange a demo" className="btn-purple" />
-          </Link>
+        <Link to="/testDrive">
+          <Button text="let's arrange a demo" className="btn-purple" />
+        </Link>
       </div>
       <Footer />
     </div>
