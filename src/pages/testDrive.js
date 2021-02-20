@@ -28,14 +28,14 @@ const TestDrive = ({ data }) => {
       </section>
       <section>
         <div className='container '>
-          <div className='d-flex '>
-          <div className='col-sm-12 col-md-6 col-lg-6'>
+          <div className='d-flex flex-wrap'>
+          <div className='col-sm-12 col-md-6 col-lg-6 img-test'>
             <img src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url} alt='img-1' />
-            <button>Buy</button>
+            <button className='btn-buy'>Buy</button>
           </div>
-          <div className='col-sm-12 col-md-6 col-lg-6'>
+          <div className='col-sm-12 col-md-6 col-lg-6 img-test'>
             <img src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url} alt='img-1' />
-            <button>Buy</button>
+            <button className='btn-buy'>Buy</button>
           </div>
           </div>
         </div>

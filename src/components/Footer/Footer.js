@@ -1,24 +1,22 @@
-import React from "react"
-import "./Footer.css"
+import React, { useState } from "react"
 import emailjs from "emailjs-com"
-
-// images
+import { Link } from "gatsby"
+import "./Footer.css"
 import Linkedin from "../../assets/images/linkedin.png"
 import Twitter from "../../assets/images/twitter.png"
 import Youtube from "../../assets/images/youtube.png"
 import Logo from "../../assets/images/logoBlue.png"
 
-import { Link } from "@reach/router"
 const Footer = () => {
+  const [email, setEmail] = useState("")
   const handleSubmit = e => {
-    console.log(e)
     e.preventDefault()
     emailjs
       .sendForm(
-        "service_xeshyh7",
-        "template_j5o5iyo",
+        "service_qkbep48",
+        "template_95d163x",
         e.target,
-        "user_mH2VkDTDY0g5ysxeoF9oE"
+        "user_H1giHzeT00K7WW4tInQOn"
       )
       .then(
         result => {
@@ -28,6 +26,22 @@ const Footer = () => {
           console.log(error.text)
         }
       )
+    emailjs
+      .sendForm(
+        "service_qkbep48",
+        "template_8hke6d4",
+        e.target,
+        "user_H1giHzeT00K7WW4tInQOn"
+      )
+      .then(
+        result => {
+          console.log(result)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    setEmail("")
   }
   return (
     <footer className="footer-section">
@@ -75,9 +89,11 @@ const Footer = () => {
                 <div>
                   <form onSubmit={handleSubmit}>
                     <input
+                      value={email}
                       placeholder="your email"
                       type="email"
                       name="user_email"
+                      onChange={e => setEmail(e.currentTarget.value)}
                     />
                     <button type="submit">submit</button>
                   </form>

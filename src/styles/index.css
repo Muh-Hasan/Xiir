@@ -323,18 +323,47 @@
   padding-top: 0;
 }
 /* test drive */
+
 .img-test {
   text-align: center;
 }
 .img-test img {
   max-width: 550px;
   width: 100%;
-  padding: 0% 0 0 12%;
+  margin-bottom: 20px;
+}
+.img-test  .btn-buy {
+  border: 2px solid #E5EDF8 !important;
+  font-size: 15px;
+  letter-spacing: 0.31px;
+  height: 40px;
+  border-radius: none !important;
+  padding: 8px 15px;
+  padding-left: 21px;
+  min-width: 160px;
+  text-transform: uppercase;
+  background-color: #fff;
+  display: inline-block;
+  color: #E5EDF8;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 9px;
+  padding-top: 7px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 500 !important;
+  transition: all 0.2s, 0.3s ease-in-out;
+}
+.btn-buy:hover{
+  background-color: #E5EDF8;
+  color: white;
 }
 .section-padding-4 {
   padding-top: 80px;
   padding-bottom: 50px;
 }
+
 /* pay */
 .pay-padding {
   padding-top: 200px;
