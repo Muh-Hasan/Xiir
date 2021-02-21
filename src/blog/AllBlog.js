@@ -31,7 +31,7 @@ const AllBlogs = () => {
         <div className="container">
           <div className="row justify-content-center container">
             {allContentfulBlog.nodes.map((v, i) => (
-              <Link to={`/blog/${v.title}`}>
+              <Link to={`/blog/${i}`}>
                 <Card
                   img={v.img.file.url}
                   title={v.title}
