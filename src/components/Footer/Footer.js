@@ -93,8 +93,8 @@ const Footer = () => {
                 <div>
                   <form onSubmit={handleSubmit}>
                     <input
-                      value={email}
                       placeholder="your email"
+                      value={email}
                       type="email"
                       name="user_email"
                       onChange={e => setEmail(e.currentTarget.value)}

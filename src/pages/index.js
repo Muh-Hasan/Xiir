@@ -1,17 +1,12 @@
 import React from "react"
-// Components
+import ReactPlayer from "react-player/youtube"
+import { graphql } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
 import AccordionTeal from "../components/AccordionTeal"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 import Content from "../components/Content"
-// Iamges
-// import Another from "../assets/images/anotherImg.jpg"
-// import Idea from "../assets/images/Idea.jpg"
-// libs
-import ReactPlayer from "react-player/youtube"
-import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Home = ({ data }) => {
   const {
@@ -22,7 +17,6 @@ const Home = ({ data }) => {
     allContentfulFrequentlyAskedQuestions,
     allContentfulContentArea,
   } = data
-
   return (
     <div>
       <Header />
@@ -56,7 +50,7 @@ const Home = ({ data }) => {
         sideOne={allContentfulContentArea.nodes[0].textMainOne}
         sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
         smallOne={allContentfulContentArea.nodes[0].textSideOne}
-        className='teal-bg'
+        className="teal-bg"
       />
 
       <section className="d-flex section-padding-2">
