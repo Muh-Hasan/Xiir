@@ -1,14 +1,51 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
-import Content from "../components/Content"
+import emailjs from "emailjs-com"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const TestDrive = ({ data }) => {
+  const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const { allContentfulTestDrive, allContentfulFrequentlyAskedQuestions } = data
+  const handleSubmit = e => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        "service_qkbep48",
+        "template_95d163x",
+        e.target,
+        "user_H1giHzeT00K7WW4tInQOn"
+      )
+      .then(
+        result => {
+          console.log(result)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    emailjs
+      .sendForm(
+        "service_qkbep48",
+        "template_8hke6d4",
+        e.target,
+        "user_H1giHzeT00K7WW4tInQOn"
+      )
+      .then(
+        result => {
+          console.log(result)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    setEmail("")
+    setName("")
+  }
   return (
     <div>
       <Header />
@@ -27,16 +64,22 @@ const TestDrive = ({ data }) => {
         </div>
       </section>
       <section>
-        <div className='container '>
-          <div className='d-flex flex-wrap'>
-          <div className='col-sm-12 col-md-6 col-lg-6 img-test'>
-            <img src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url} alt='img-1' />
-            <button className='btn-buy'>Buy</button>
-          </div>
-          <div className='col-sm-12 col-md-6 col-lg-6 img-test'>
-            <img src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url} alt='img-1' />
-            <button className='btn-buy'>Buy</button>
-          </div>
+        <div className="container ">
+          <div className="d-flex flex-wrap">
+            <div className="col-sm-12 col-md-6 col-lg-6 img-test">
+              <img
+                src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url}
+                alt="img-1"
+              />
+              <button className="btn-buy">Buy</button>
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6 img-test">
+              <img
+                src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url}
+                alt="img-1"
+              />
+              <button className="btn-buy">Buy</button>
+            </div>
           </div>
         </div>
       </section>
@@ -95,26 +138,39 @@ const TestDrive = ({ data }) => {
         </div>
       </section>
       <div className="text-center ser-img-2">
-        <img
-          src={allContentfulTestDrive.nodes[0].image.file.url}
-          alt="ser-2"
-        />
+        <img src={allContentfulTestDrive.nodes[0].image.file.url} alt="ser-2" />
       </div>
       <section className="download-box section-padding">
         <div className="container">
-        <div className="our-media">
+          <div className="our-media">
             <h1>{allContentfulTestDrive.nodes[0].subText}</h1>
           </div>
           <div className="box ">
             <div className=" datasheet-down">
-              <div className="input">
-                <input placeholder="your full name" />
-                <input placeholder="please enter a valid business email" />
-              </div>
-              <br />
-              <div>
-                  <Button text="submit" className="btn-purple" />
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="input">
+                  <input
+                    placeholder="your full name"
+                    value={name}
+                    type="text"
+                    name="user_name"
+                    onChange={e => setName(e.currentTarget.value)}
+                  />
+                  <input
+                    placeholder="please enter a valid business email"
+                    value={email}
+                    type="email"
+                    name="user_email"
+                    onChange={e => setEmail(e.currentTarget.value)}
+                  />
+                </div>
+                <br />
+                <div>
+                  <button type="submit" className="btn btn-purple">
+                    submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

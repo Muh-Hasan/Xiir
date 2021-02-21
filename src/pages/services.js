@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
 import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Services = ({ data }) => {
   const {
