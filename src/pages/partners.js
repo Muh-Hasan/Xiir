@@ -21,7 +21,7 @@ const Partners = ({ data }) => {
     emailjs
       .sendForm(
         "service_qkbep48",
-        "template_95d163x",
+        "template_vo1uex8",
         e.target,
         "user_H1giHzeT00K7WW4tInQOn"
       )
@@ -147,8 +147,7 @@ const Partners = ({ data }) => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
                   {allContentfulFrequentlyAskedQuestions.nodes
-                    .slice(0)
-                    .reverse()
+                    .slice(3)
                     .map((v, i) => (
                       <AccordionGreen
                         title={v.title}

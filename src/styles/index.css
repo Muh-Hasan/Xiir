@@ -258,7 +258,7 @@
 /* Contact page */
 .contact-section {
   overflow: hidden;
-  padding-top: 206px;
+  padding-top: 200px;
 }
 .contact-section .form-group {
   margin-bottom: 1rem;
@@ -490,6 +490,9 @@
   }
   .pay-padding {
     padding-top: 150px;
+  }
+  .contact-section{
+    padding-top: 100px;
   }
 }
 @media (max-width: 500px) {
