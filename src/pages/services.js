@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
-import Accordion from "../components/Accordion/Accordion"
+import AccordionGreen from "../components/AccordionGreen"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 
@@ -35,7 +35,9 @@ const Services = ({ data }) => {
                 src={allContentfulServices.nodes[0].image.file.url}
                 alt="ser-1"
               />
-              <Button text="test drive" className="btn-purple" />
+              <Link to='/testDrive'>
+              <Button text="get instant test drive" className="btn-purple" />
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +49,7 @@ const Services = ({ data }) => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
                   (v, i) => (
-                    <Accordion
+                    <AccordionGreen
                       title={v.tittle}
                       content={v.title}
                       img={v.image.file.url}
@@ -90,7 +92,7 @@ const Services = ({ data }) => {
         />
       </div>
       <div className="container ser-padding-btn">
-        <Link to="/testDrive">
+        <Link to="/contact">
           <Button text="let's arrange a demo" className="btn-purple" />
         </Link>
       </div>

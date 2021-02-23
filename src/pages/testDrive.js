@@ -3,20 +3,24 @@ import { graphql } from "gatsby"
 import emailjs from "emailjs-com"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
-import Accordion from "../components/Accordion/Accordion"
 import Footer from "../components/Footer/Footer"
-import Button from "../components/Button"
+import Content from "../components/Content"
+import AccordionGreen from "../components/AccordionGreen"
 
 const TestDrive = ({ data }) => {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
-  const { allContentfulTestDrive, allContentfulFrequentlyAskedQuestions } = data
+  const {
+    allContentfulTestDrive,
+    allContentfulFrequentlyAskedQuestions,
+    allContentfulContentArea,
+  } = data
   const handleSubmit = e => {
     e.preventDefault()
     emailjs
       .sendForm(
         "service_qkbep48",
-        "template_95d163x",
+        "template_vo1uex8",
         e.target,
         "user_H1giHzeT00K7WW4tInQOn"
       )
@@ -71,32 +75,40 @@ const TestDrive = ({ data }) => {
                 src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url}
                 alt="img-1"
               />
-              <button className="btn-buy">Buy</button>
+              <button className="btn btn-purple">Buy</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-test">
               <img
                 src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url}
                 alt="img-1"
               />
-              <button className="btn-buy">Buy</button>
+              <button className="btn btn-purple">Buy</button>
             </div>
           </div>
         </div>
       </section>
+      <div className="section-padding-2">
+        <Content
+          pOne={allContentfulContentArea.nodes[0].textPointsOne}
+          pTwo={allContentfulContentArea.nodes[0].textPointsTwo}
+          pThree={allContentfulContentArea.nodes[0].textPointThree}
+          Heading={allContentfulContentArea.nodes[0].textMainHeading}
+          sideOne={allContentfulContentArea.nodes[0].textMainOne}
+          sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
+          smallOne={allContentfulContentArea.nodes[0].textSideOne}
+          className="gr-bg"
+        />
+      </div>
       <section className="section-padding d-flex">
         <div className="container">
-          <div className="faq">
-            <h1>frequently asked questions</h1>
-          </div>
           <div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
                   {allContentfulFrequentlyAskedQuestions.nodes
-                    .slice(0)
-                    .reverse()
+                    .slice(3)
                     .map((v, i) => (
-                      <Accordion
+                      <AccordionGreen
                         title={v.title}
                         content={documentToReactComponents(
                           JSON.parse(v.description.raw)
@@ -154,6 +166,7 @@ const TestDrive = ({ data }) => {
                     value={name}
                     type="text"
                     name="user_name"
+                    style={{ marginBottom: "10px" }}
                     onChange={e => setName(e.currentTarget.value)}
                   />
                   <input
@@ -161,6 +174,7 @@ const TestDrive = ({ data }) => {
                     value={email}
                     type="email"
                     name="user_email"
+                    style={{ marginBottom: "10px" }}
                     onChange={e => setEmail(e.currentTarget.value)}
                   />
                 </div>
@@ -206,6 +220,17 @@ export const qurey = graphql`
             url
           }
         }
+      }
+    }
+    allContentfulContentArea {
+      nodes {
+        textMainHeading
+        textMainOne
+        textMainTwo
+        textPointThree
+        textPointsOne
+        textPointsTwo
+        textSideOne
       }
     }
     allContentfulFrequentlyAskedQuestions {

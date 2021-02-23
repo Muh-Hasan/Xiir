@@ -141,7 +141,7 @@
   margin-bottom: 20px;
 }
 .xiir-benefits .div-head h1 {
-  color: #243671;
+  color: #ffa000;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
@@ -463,14 +463,16 @@
   font-size: 35px;
   font-weight: 600;
   margin-top: 20px;
+  color: #243671;
 }
 .blog-show p {
   font-size: 19px;
   font-weight: 500;
+  color: #243671;
 }
 
 @media (max-width: 767px) {
-  .section-padding-blog{
+  .section-padding-blog {
     padding-top: 100px;
   }
   .blog-show {
@@ -495,7 +497,7 @@
   .pay-padding {
     padding-top: 150px;
   }
-  .contact-section{
+  .contact-section {
     padding-top: 100px;
   }
 }
