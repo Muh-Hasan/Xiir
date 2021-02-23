@@ -5,7 +5,6 @@ import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
 
 const AllBlogs = ({ location }) => {
-  
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlog {
