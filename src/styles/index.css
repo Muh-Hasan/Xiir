@@ -449,7 +449,7 @@
   color: #243671;
 }
 .section-padding-blog {
-  padding-top: 150px;
+  padding-top: 200px;
   padding-bottom: 20px;
 }
 .blog-show {
@@ -468,7 +468,11 @@
   font-size: 19px;
   font-weight: 500;
 }
+
 @media (max-width: 767px) {
+  .section-padding-blog{
+    padding-top: 100px;
+  }
   .blog-show {
     max-width: 300px;
   }

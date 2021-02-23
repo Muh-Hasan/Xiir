@@ -3,7 +3,9 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import Card from "../components/Card"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
-const AllBlogs = () => {
+
+const AllBlogs = ({ location }) => {
+  
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlog {
@@ -25,7 +27,7 @@ const AllBlogs = () => {
     <div>
       <Header />
       <section className="section-padding-blog">
-        <div className="text-center">
+        <div className="text-left container">
           <h1 className="headings-of-all">blog</h1>
         </div>
         <div className="container">
@@ -36,6 +38,7 @@ const AllBlogs = () => {
                   img={v.img.file.url}
                   title={v.title}
                   description={v.blogSummary}
+                  href={`${location.origin}/blog/${i}`}
                 />
               </Link>
             ))}
