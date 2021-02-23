@@ -26,12 +26,6 @@ const Pay = ({ data }) => {
                   <Button text="contact" className="btn-purple" />
                 </Link>
               </div>
-              <div className='pay-stripe'>
-                <img
-                  src={allContentfulPayPage.nodes[0].image.file.url}
-                  alt="stripe"
-                />
-              </div>
             </div>
             <div className=" col-sm-12 col-md-6 col-lg-6 contct-form-area">
               <div>
@@ -51,6 +45,12 @@ const Pay = ({ data }) => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="pay-stripe">
+            <img
+              src={allContentfulPayPage.nodes[0].image.file.url}
+              alt="stripe"
+            />
           </div>
         </div>
       </section>
