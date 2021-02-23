@@ -141,10 +141,13 @@
   margin-bottom: 20px;
 }
 .xiir-benefits .div-head h1 {
-  color: #ffa000;
+  color: #243671;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
+}
+.colorOrange{
+ color: #ffa000 !important;
 }
 .xiir-benefits .div-para h4 {
   color: #243671;
