@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import gsap from "gsap"
-import { Link } from "@reach/router"
+import { Link, useStaticQuery, graphql } from "gatsby"
 // CSS
 import "./Header.css"
 // Images
@@ -17,6 +17,33 @@ const Header = () => {
   const closeHiddenMenu = () => {
     gsap.to(hiddenMenu.current, { opacity: 0, width: "0%" })
   }
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulHeader {
+        nodes {
+          logoBlue {
+            file {
+              url
+            }
+          }
+          logo {
+            file {
+              url
+            }
+          }
+          mainText
+          rightText
+          btnFour
+          btnFive
+          btnOne
+          btnThree
+          btnTwo
+          leftText
+        }
+      }
+    }
+  `)
+  const { allContentfulHeader } = data
   return (
     <div className="website-header">
       <header className="site-header fixed-top ">
@@ -24,11 +51,11 @@ const Header = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col header-icon">
               <Link to="/">
-                <img src={Logo} alt="logo" />
+                <img src={allContentfulHeader.nodes[0].logoBlue.file.url} alt="logo" />
               </Link>
             </div>
             <div className="col text-center main-text">
-              <h1> smart oversight</h1>
+              <h1>{allContentfulHeader.nodes[0].mainText}</h1>
             </div>
             <div className="col main-triger">
               <div className="main-div">
@@ -44,7 +71,7 @@ const Header = () => {
             <div className="container">
               <div className="row justify-content-between align-items-center">
                 <div className="col header-icon">
-                  <img src={LogoWhite} alt="logo" />
+                  <img src={allContentfulHeader.nodes[0].logo.file.url} alt="logo" />
                 </div>
                 <div className="col menu-close-triger">
                   <div style={{ textAlign: "right" }}>
@@ -65,39 +92,39 @@ const Header = () => {
                 <ul>
                   <li>
                     <Link to="/testDrive">
-                      <button>test drive</button>
+                      <button>{allContentfulHeader.nodes[0].btnOne}</button>
                     </Link>
                   </li>
                   <li>
                     <Link to="/services">
-                      <button>services</button>
+                      <button>{allContentfulHeader.nodes[0].btnTwo}</button>
                     </Link>
                   </li>
                   <li>
                     <Link to="/partners">
-                      <button>partners</button>
+                      <button>{allContentfulHeader.nodes[0].btnThree}</button>
                     </Link>
                   </li>
                   <li>
                     <Link to="/blog">
-                      <button>blog</button>
+                      <button>{allContentfulHeader.nodes[0].btnFour}</button>
                     </Link>
                   </li>
                   <li>
                     <Link to="/contact">
-                      <button>contact</button>
+                      <button>{allContentfulHeader.nodes[0].btnFive}</button>
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="container-fluid menu-footer d-flex justify-content-between">
                 <div className="col menu-tagline">
-                  <h2>get smart with oversight</h2>
+                  <h2>{allContentfulHeader.nodes[0].leftText}</h2>
                 </div>
                 <div className="col menu-footer-login d-md-block">
                   <h2>
                     <a href="https://xiir.com/" target="blank">
-                      Login
+                      {allContentfulHeader.nodes[0].rightText}
                     </a>
                   </h2>
                 </div>

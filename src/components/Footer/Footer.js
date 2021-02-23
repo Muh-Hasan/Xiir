@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import emailjs from "emailjs-com"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import "./Footer.css"
 import Linkedin from "../../assets/images/linkedin.png"
 import Twitter from "../../assets/images/twitter.png"
@@ -43,6 +43,22 @@ const Footer = () => {
       )
     setEmail("")
   }
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulFooter {
+        nodes {
+          email
+          logo {
+            file {
+              url
+            }
+          }
+          subTitle
+        }
+      }
+    }
+  `)
+  const { allContentfulFooter } = data
   return (
     <footer className="footer-section">
       <div className="container">
@@ -51,11 +67,14 @@ const Footer = () => {
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 col-tagline">
               <div className="header-icon margin-bot">
                 <Link to="/">
-                  <img src={Logo} alt="logo" />
+                  <img
+                    src={allContentfulFooter.nodes[0].logo.file.url}
+                    alt="logo"
+                  />
                 </Link>
               </div>
-              <h2>smart oversight </h2>
-              <h5>sales@xiir.com</h5>
+              <h2>{allContentfulFooter.nodes[0].subTitle}</h2>
+              <h5>{allContentfulFooter.nodes[0].email}</h5>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 footer-menu">
               <h2>Menu</h2>

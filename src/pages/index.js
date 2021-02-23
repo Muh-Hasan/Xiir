@@ -1,9 +1,9 @@
 import React from "react"
 import ReactPlayer from "react-player/youtube"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
-import AccordionTeal from "../components/AccordionTeal"
+import AccordionGreen from "../components/AccordionGreen"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
 import Content from "../components/Content"
@@ -33,10 +33,12 @@ const Home = ({ data }) => {
             <h3>{allContentfulLandingPageMain.nodes[0].sideHeading}</h3>
             <h1>{allContentfulLandingPageMain.nodes[0].mainHeading}</h1>
             <div className="btn-div">
+              <Link to='/testDrive'>
               <Button
                 text={allContentfulLandingPageMain.nodes[0].buttonText}
                 className="btn-purple"
               />
+              </Link>
             </div>
           </div>
         </div>
@@ -50,7 +52,8 @@ const Home = ({ data }) => {
         sideOne={allContentfulContentArea.nodes[0].textMainOne}
         sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
         smallOne={allContentfulContentArea.nodes[0].textSideOne}
-        className="teal-bg"
+        className="gr-bg"
+
       />
 
       <section className="d-flex section-padding-2">
@@ -94,7 +97,7 @@ const Home = ({ data }) => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
                   (v, i) => (
-                    <AccordionTeal
+                    <AccordionGreen
                       title={v.tittle}
                       content={v.title}
                       img={v.image.file.url}
@@ -204,7 +207,7 @@ const Home = ({ data }) => {
                     .slice(0)
                     .reverse()
                     .map((v, i) => (
-                      <AccordionTeal
+                      <AccordionGreen
                         title={v.title}
                         content={documentToReactComponents(
                           JSON.parse(v.description.raw)
