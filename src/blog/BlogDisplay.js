@@ -2,9 +2,15 @@ import React from "react"
 import { useParams } from "@reach/router"
 import { graphql, useStaticQuery } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import {
+  LinkedinShareButton,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinIcon,
+} from "react-share"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
-const BlogDisplay = () => {
+const BlogDisplay = ({ location }) => {
   const params = useParams()
   const urlPath = params.title
   const data = useStaticQuery(graphql`
@@ -50,6 +56,26 @@ const BlogDisplay = () => {
             </div>
             <div>
               <img src={filter.blogDetail.references[0]?.file.url} />
+            </div>
+          </div>
+        </div>
+        <div className="container row justify-content-center">
+          <div className="container row icons-share ">
+            <div>
+              <h4>SHARE</h4>
+            </div>
+            <div>
+              <TwitterShareButton
+                url={`${location.origin}/blog/${urlPath}`}
+                color="none"
+              >
+                <TwitterIcon size={30} />
+              </TwitterShareButton>
+            </div>
+            <div>
+              <LinkedinShareButton url={`${location.origin}/blog/${urlPath}`}>
+                <LinkedinIcon size={30} />
+              </LinkedinShareButton>
             </div>
           </div>
         </div>

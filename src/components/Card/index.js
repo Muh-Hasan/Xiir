@@ -1,16 +1,13 @@
 import React from "react"
 import {
-  FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-  FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
 } from "react-share"
 import "./index.css"
 
 const Card = ({ img, title, description, href }) => {
-  console.log(href)
   return (
     <div className="blogCard">
       <div>
@@ -27,11 +24,6 @@ const Card = ({ img, title, description, href }) => {
             <TwitterShareButton url={href} color="none">
               <TwitterIcon size={30} />
             </TwitterShareButton>
-          </div>
-          <div>
-            <FacebookShareButton url={href}>
-              <FacebookIcon size={30} />
-            </FacebookShareButton>
           </div>
           <div>
             <LinkedinShareButton url={href}>

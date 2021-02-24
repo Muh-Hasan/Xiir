@@ -18,16 +18,31 @@ const AllBlogs = ({ location }) => {
           }
         }
       }
+      allContentfulAllBlogs {
+        nodes {
+          title
+          description
+        }
+      }
     }
   `)
-  const { allContentfulBlog } = data
+  const { allContentfulBlog, allContentfulAllBlogs } = data
 
   return (
     <div>
       <Header />
       <section className="section-padding-blog">
-        <div className="text-left container">
-          <h1 className="headings-of-all">blog</h1>
+        <div className="container">
+          <div className="row justify-content-center container">
+            <div className="col-sm-12 col-md-6 col-lg-6 contact-tagline">
+              <h3 className="headings-of-all">
+                {allContentfulAllBlogs.nodes[0].title}
+              </h3>
+              <div style={{ marginBottom: "20px" }}>
+                <h2>{allContentfulAllBlogs.nodes[0].description}</h2>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="container">
           <div className="row justify-content-center container">
