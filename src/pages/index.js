@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactPlayer from "react-player/youtube"
 import { graphql, Link } from "gatsby"
+import emailjs from "emailjs-com"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Header from "../components/Header"
 import AccordionGreen from "../components/AccordionGreen"
@@ -9,6 +10,7 @@ import Button from "../components/Button"
 import Content from "../components/Content"
 
 const Home = ({ data }) => {
+  const [email, setEmail] = useState("")
   const {
     allContentfulLandingPageMain,
     allContentfulSimplifyYourOversight,
@@ -17,6 +19,46 @@ const Home = ({ data }) => {
     allContentfulFrequentlyAskedQuestions,
     allContentfulContentArea,
   } = data
+  const download = () => {
+    window.open(
+      "https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"
+    )
+  }
+  const handleSubmit = e => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        "service_qkbep48",
+        "template_95d163x",
+        e.target,
+        "user_H1giHzeT00K7WW4tInQOn"
+      )
+      .then(
+        result => {
+          console.log(result)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    emailjs
+      .sendForm(
+        "service_qkbep48",
+        "template_8hke6d4",
+        e.target,
+        "user_H1giHzeT00K7WW4tInQOn"
+      )
+      .then(
+        result => {
+          console.log(result)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    download()
+    setEmail("")
+  }
   return (
     <div>
       <Header />
@@ -33,11 +75,11 @@ const Home = ({ data }) => {
             <h3>{allContentfulLandingPageMain.nodes[0].sideHeading}</h3>
             <h1>{allContentfulLandingPageMain.nodes[0].mainHeading}</h1>
             <div className="btn-div">
-              <Link to='/testDrive'>
-              <Button
-                text={allContentfulLandingPageMain.nodes[0].buttonText}
-                className="btn-purple"
-              />
+              <Link to="/testDrive">
+                <Button
+                  text={allContentfulLandingPageMain.nodes[0].buttonText}
+                  className="btn-purple"
+                />
               </Link>
             </div>
           </div>
@@ -53,7 +95,6 @@ const Home = ({ data }) => {
         sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
         smallOne={allContentfulContentArea.nodes[0].textSideOne}
         className="gr-bg"
-
       />
 
       <section className="d-flex section-padding-2">
@@ -109,7 +150,9 @@ const Home = ({ data }) => {
             </div>
           </div>
           <div className="btn-accod-div">
-            <Button text="explore more" className="btn-purple" />
+            <Link to="/services">
+              <Button text="explore further" className="btn-purple" />
+            </Link>
           </div>
         </div>
       </section>
@@ -232,15 +275,25 @@ const Home = ({ data }) => {
               <h2>download the xiir datesheet</h2>
             </div>
             <div className=" datasheet-down">
-              <div className="input">
-                <input placeholder="please enter a valid business email" />
-              </div>
-              <br />
-              <div>
-                <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
-                  <Button text="download" className="btn-purple" />
-                </a>
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="input">
+                  <input
+                    placeholder="your email"
+                    value={email}
+                    type="email"
+                    name="user_email"
+                    onChange={e => setEmail(e.currentTarget.value)}
+                  />
+                </div>
+                <br />
+                <div>
+                  {/* <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"> */}
+                  <button className="btn btn-purple" type="submit">
+                    download
+                  </button>
+                  {/* </a> */}
+                </div>
+              </form>
             </div>
           </div>
         </div>

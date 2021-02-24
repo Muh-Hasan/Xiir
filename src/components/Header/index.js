@@ -4,9 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 // CSS
 import "./Header.css"
 // Images
-import Logo from "../../assets/images/xiir.png"
 import Close from "../../assets/images/closeMenu.svg"
-import LogoWhite from "../../assets/images/logoWhite.png"
 
 const Header = () => {
   const hiddenMenu = useRef(null)
@@ -51,7 +49,10 @@ const Header = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col header-icon">
               <Link to="/">
-                <img src={allContentfulHeader.nodes[0].logoBlue.file.url} alt="logo" />
+                <img
+                  src={allContentfulHeader.nodes[0].logoBlue.file.url}
+                  alt="logo"
+                />
               </Link>
             </div>
             <div className="col text-center main-text">
@@ -71,7 +72,12 @@ const Header = () => {
             <div className="container">
               <div className="row justify-content-between align-items-center">
                 <div className="col header-icon">
-                  <img src={allContentfulHeader.nodes[0].logo.file.url} alt="logo" />
+                  <Link to="/">
+                    <img
+                      src={allContentfulHeader.nodes[0].logo.file.url}
+                      alt="logo"
+                    />
+                  </Link>
                 </div>
                 <div className="col menu-close-triger">
                   <div style={{ textAlign: "right" }}>

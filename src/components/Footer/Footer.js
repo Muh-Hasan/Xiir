@@ -5,7 +5,6 @@ import "./Footer.css"
 import Linkedin from "../../assets/images/linkedin.png"
 import Twitter from "../../assets/images/twitter.png"
 import Youtube from "../../assets/images/youtube.png"
-import Logo from "../../assets/images/logoBlue.png"
 
 const Footer = () => {
   const [email, setEmail] = useState("")
@@ -54,6 +53,7 @@ const Footer = () => {
             }
           }
           subTitle
+          updates
         }
       }
     }
@@ -107,7 +107,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4 footer-form">
-              <h2>For updates on interesting stuff.</h2>
+              <h2>{allContentfulFooter.nodes[0].updates}</h2>
               <div className="footer-subscribe-form">
                 <div>
                   <form onSubmit={handleSubmit}>
