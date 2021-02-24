@@ -31,7 +31,7 @@ const Pay = ({ data }) => {
               <div>
                 <div className="form-group">
                   <label className="sr-only">Amount</label>
-                  <input placeholder="Amount" />
+                  <input placeholder="Enter Amount" />
                 </div>
                 <div className="d-flex pay-input-div container">
                   <input type="checkbox" className="checkbox" />
@@ -40,8 +40,8 @@ const Pay = ({ data }) => {
                     <span className="with-color">Terms of use</span>
                   </p>
                 </div>
-                <div className="footer-form">
-                  <button type="submit">pay</button>
+                <div className='footer-form btn-pay'>
+                  <button type="submit" >pay</button>
                 </div>
               </div>
             </div>
