@@ -1,5 +1,5 @@
-.pay li{
-margin-left: 20px;
+.pay li {
+  margin-left: 20px;
 }
 .footer-section {
   background-color: #f8f8f8;
@@ -30,7 +30,7 @@ margin-left: 20px;
 .footer-section .footer-menu {
   max-width: 250px;
 }
-.footer-section .margin-bot{
+.footer-section .margin-bot {
   margin-bottom: 7px;
 }
 .foot-menu {
@@ -153,9 +153,9 @@ margin-left: 20px;
   margin-top: 10px;
 }
 @media (max-width: 767px) {
-  .pay li{
+  .pay li {
     margin-left: 10px;
-    }
+  }
   /* .privacy p {
     margin-left: 5px !important;
   } */

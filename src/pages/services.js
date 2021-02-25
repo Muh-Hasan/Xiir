@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import AccordionGreen from "../components/AccordionGreen"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
-import Content from '../components/Content'
+import Content from "../components/Content"
 const Services = ({ data }) => {
   const {
     allContentfulFrequentlyAskedQuestions,
@@ -36,8 +36,11 @@ const Services = ({ data }) => {
                 src={allContentfulServices.nodes[0].image.file.url}
                 alt="ser-1"
               />
-              <Link to='/testDrive'>
-              <Button text="get an instant test drive" className="btn-purple" />
+              <Link to="/testDrive">
+                <Button
+                  text="get an instant test drive"
+                  className="btn-purple"
+                />
               </Link>
             </div>
           </div>
@@ -89,7 +92,9 @@ const Services = ({ data }) => {
       <section className="xiir-benefits">
         <div className="container">
           <div className="div-head">
-            <h1 className='colorOrange'>{allContentfulServices.nodes[0].titleOne}</h1>
+            <h1 className="colorOrange">
+              {allContentfulServices.nodes[0].titleOne}
+            </h1>
             <h3 className="ser-head-2">
               {allContentfulServices.nodes[0].sideTitle}
             </h3>

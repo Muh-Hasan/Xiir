@@ -40,8 +40,8 @@ const Pay = ({ data }) => {
                     <span className="with-color">Terms of use</span>
                   </p>
                 </div>
-                <div className='footer-form btn-pay'>
-                  <button type="submit" >pay</button>
+                <div className="footer-form btn-pay">
+                  <button type="submit">pay</button>
                 </div>
               </div>
             </div>

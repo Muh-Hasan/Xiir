@@ -8,7 +8,7 @@ const Content = ({
   sideOne,
   sideTwo,
   smallOne,
-  className
+  className,
 }) => {
   return (
     <>

@@ -56,7 +56,9 @@ const TestDrive = ({ data }) => {
       <section className="xiir-benefits contact-section">
         <div className="container">
           <div className="div-head">
-            <h3 className="headings-of-all">{allContentfulTestDriveNew.nodes[0].title}</h3>
+            <h3 className="headings-of-all">
+              {allContentfulTestDriveNew.nodes[0].title}
+            </h3>
             <h3 className="ser-head-2">
               {allContentfulTestDriveNew.nodes[0].mainText}
             </h3>
@@ -75,14 +77,24 @@ const TestDrive = ({ data }) => {
                 src={allContentfulTestDriveNew.nodes[0].planOne.file.url}
                 alt="img-1"
               />
-              <button className="btn btn-purple" style={{marginBottom: "20px"}}>Buy</button>
+              <button
+                className="btn btn-purple"
+                style={{ marginBottom: "20px" }}
+              >
+                Buy
+              </button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-test">
               <img
                 src={allContentfulTestDriveNew.nodes[0].planTwo.file.url}
                 alt="img-1"
               />
-              <button className="btn btn-purple" style={{marginBottom: "20px"}}>Buy</button>
+              <button
+                className="btn btn-purple"
+                style={{ marginBottom: "20px" }}
+              >
+                Buy
+              </button>
             </div>
           </div>
         </div>
@@ -137,12 +149,17 @@ const TestDrive = ({ data }) => {
         </div>
       </section>
       <div className="text-center ser-img-2">
-        <img src={allContentfulTestDriveNew.nodes[0].commingSoonImg.file.url} alt="ser-2" />
+        <img
+          src={allContentfulTestDriveNew.nodes[0].commingSoonImg.file.url}
+          alt="ser-2"
+        />
       </div>
       <section className="download-box section-padding">
         <div className="container">
           <div className="our-media">
-            <h3 className="ser-head-2">{allContentfulTestDriveNew.nodes[0].inputTitle}</h3>
+            <h3 className="ser-head-2">
+              {allContentfulTestDriveNew.nodes[0].inputTitle}
+            </h3>
           </div>
           <div className="box ">
             <div className=" datasheet-down">
@@ -192,8 +209,8 @@ export const qurey = graphql`
         subDescription
         descriptionOne
         descriptionTwo
-      inputTitle
-      mainText
+        inputTitle
+        mainText
         planTwo {
           file {
             url
