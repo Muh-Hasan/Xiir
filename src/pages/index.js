@@ -278,7 +278,7 @@ const Home = ({ data }) => {
               <form onSubmit={handleSubmit}>
                 <div className="input">
                   <input
-                    placeholder="your email"
+                    placeholder="PLEASE ENTER YOUR EMAIL"
                     value={email}
                     type="email"
                     name="user_email"
@@ -287,11 +287,9 @@ const Home = ({ data }) => {
                 </div>
                 <br />
                 <div>
-                  {/* <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy"> */}
                   <button className="btn btn-purple" type="submit">
                     download
                   </button>
-                  {/* </a> */}
                 </div>
               </form>
             </div>

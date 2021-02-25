@@ -5,11 +5,12 @@ import Header from "../components/Header"
 import AccordionGreen from "../components/AccordionGreen"
 import Footer from "../components/Footer/Footer"
 import Button from "../components/Button"
-
+import Content from '../components/Content'
 const Services = ({ data }) => {
   const {
-    allContentfulToggleWithImagesSimplifyYourOversight,
+    allContentfulFrequentlyAskedQuestions,
     allContentfulServices,
+    allContentfulContentArea,
   } = data
 
   return (
@@ -36,27 +37,42 @@ const Services = ({ data }) => {
                 alt="ser-1"
               />
               <Link to='/testDrive'>
-              <Button text="get instant test drive" className="btn-purple" />
+              <Button text="get an instant test drive" className="btn-purple" />
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className="ser-acc-padding">
+      <div className="section-padding-2">
+        <Content
+          pOne={allContentfulContentArea.nodes[1].textPointsOne}
+          pTwo={allContentfulContentArea.nodes[1].textPointsTwo}
+          pThree={allContentfulContentArea.nodes[1].textPointThree}
+          Heading={allContentfulContentArea.nodes[1].textMainHeading}
+          sideOne={allContentfulContentArea.nodes[1].textMainOne}
+          sideTwo={allContentfulContentArea.nodes[1].textMainTwo}
+          smallOne={allContentfulContentArea.nodes[1].textSideOne}
+          className="gr-bg"
+        />
+      </div>
+      <section className="section-padding d-flex">
         <div className="container">
           <div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                {allContentfulToggleWithImagesSimplifyYourOversight.nodes.map(
-                  (v, i) => (
-                    <AccordionGreen
-                      title={v.tittle}
-                      content={v.title}
-                      img={v.image.file.url}
-                      key={i}
-                    />
-                  )
-                )}
+                <div>
+                  {allContentfulFrequentlyAskedQuestions.nodes
+                    .slice(3)
+                    .map((v, i) => (
+                      <AccordionGreen
+                        title={v.title}
+                        content={documentToReactComponents(
+                          JSON.parse(v.description.raw)
+                        )}
+                        key={i}
+                      />
+                    ))}
+                </div>
               </div>
             </div>
           </div>
@@ -105,15 +121,23 @@ export default Services
 
 export const qurey = graphql`
   query {
-    allContentfulToggleWithImagesSimplifyYourOversight {
+    allContentfulFrequentlyAskedQuestions {
       nodes {
-        tittle
-        image {
-          file {
-            url
-          }
-        }
         title
+        description {
+          raw
+        }
+      }
+    }
+    allContentfulContentArea {
+      nodes {
+        textMainHeading
+        textMainOne
+        textMainTwo
+        textPointThree
+        textPointsOne
+        textPointsTwo
+        textSideOne
       }
     }
     allContentfulServices {

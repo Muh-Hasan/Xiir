@@ -89,13 +89,13 @@ const TestDrive = ({ data }) => {
       </section>
       <div className="section-padding-2">
         <Content
-          pOne={allContentfulContentArea.nodes[0].textPointsOne}
-          pTwo={allContentfulContentArea.nodes[0].textPointsTwo}
-          pThree={allContentfulContentArea.nodes[0].textPointThree}
-          Heading={allContentfulContentArea.nodes[0].textMainHeading}
-          sideOne={allContentfulContentArea.nodes[0].textMainOne}
-          sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
-          smallOne={allContentfulContentArea.nodes[0].textSideOne}
+          pOne={allContentfulContentArea.nodes[2].textPointsOne}
+          pTwo={allContentfulContentArea.nodes[2].textPointsTwo}
+          pThree={allContentfulContentArea.nodes[2].textPointThree}
+          Heading={allContentfulContentArea.nodes[2].textMainHeading}
+          sideOne={allContentfulContentArea.nodes[2].textMainOne}
+          sideTwo={allContentfulContentArea.nodes[2].textMainTwo}
+          smallOne={allContentfulContentArea.nodes[2].textSideOne}
           className="gr-bg"
         />
       </div>

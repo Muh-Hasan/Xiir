@@ -130,13 +130,13 @@ const Partners = ({ data }) => {
 
       <div className="section-padding-2">
         <Content
-          pOne={allContentfulContentArea.nodes[0].textPointsOne}
-          pTwo={allContentfulContentArea.nodes[0].textPointsTwo}
-          pThree={allContentfulContentArea.nodes[0].textPointThree}
-          Heading={allContentfulContentArea.nodes[0].textMainHeading}
-          sideOne={allContentfulContentArea.nodes[0].textMainOne}
-          sideTwo={allContentfulContentArea.nodes[0].textMainTwo}
-          smallOne={allContentfulContentArea.nodes[0].textSideOne}
+          pOne={allContentfulContentArea.nodes[3].textPointsOne}
+          pTwo={allContentfulContentArea.nodes[3].textPointsTwo}
+          pThree={allContentfulContentArea.nodes[3].textPointThree}
+          Heading={allContentfulContentArea.nodes[3].textMainHeading}
+          sideOne={allContentfulContentArea.nodes[3].textMainOne}
+          sideTwo={allContentfulContentArea.nodes[3].textMainTwo}
+          smallOne={allContentfulContentArea.nodes[3].textSideOne}
           className="gr-bg"
         />
       </div>
