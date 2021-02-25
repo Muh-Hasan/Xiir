@@ -11,7 +11,7 @@ const TestDrive = ({ data }) => {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const {
-    allContentfulTestDrive,
+    allContentfulTestDriveNew,
     allContentfulFrequentlyAskedQuestions,
     allContentfulContentArea,
   } = data
@@ -56,14 +56,14 @@ const TestDrive = ({ data }) => {
       <section className="xiir-benefits contact-section">
         <div className="container">
           <div className="div-head">
-            <h3 className="headings-of-all">Test Drive</h3>
+            <h3 className="headings-of-all">{allContentfulTestDriveNew.nodes[0].title}</h3>
             <h3 className="ser-head-2">
-              {allContentfulTestDrive.nodes[0].title}
+              {allContentfulTestDriveNew.nodes[0].mainText}
             </h3>
           </div>
-          <br />
           <div className="div-para">
-            <h4>{allContentfulTestDrive.nodes[0].description}</h4>
+            <h4>{allContentfulTestDriveNew.nodes[0].descriptionOne}</h4>
+            <h4>{allContentfulTestDriveNew.nodes[0].descriptionTwo}</h4>
           </div>
         </div>
       </section>
@@ -72,17 +72,17 @@ const TestDrive = ({ data }) => {
           <div className="d-flex flex-wrap">
             <div className="col-sm-12 col-md-6 col-lg-6 img-test">
               <img
-                src={allContentfulTestDrive.nodes[0].imgPlanOne.file.url}
+                src={allContentfulTestDriveNew.nodes[0].planOne.file.url}
                 alt="img-1"
               />
-              <button className="btn btn-purple">Buy</button>
+              <button className="btn btn-purple" style={{marginBottom: "20px"}}>Buy</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 img-test">
               <img
-                src={allContentfulTestDrive.nodes[0].imgPlanTwo.file.url}
+                src={allContentfulTestDriveNew.nodes[0].planTwo.file.url}
                 alt="img-1"
               />
-              <button className="btn btn-purple">Buy</button>
+              <button className="btn btn-purple" style={{marginBottom: "20px"}}>Buy</button>
             </div>
           </div>
         </div>
@@ -122,47 +122,34 @@ const TestDrive = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="xiir-benefits">
-        <div className="container">
-          <div className="div-head">
-            <h3 className="ser-head-2">
-              {allContentfulTestDrive.nodes[0].title}
-            </h3>
-          </div>
-          <br />
-          <div className="div-para">
-            <h4>{allContentfulTestDrive.nodes[0].description}</h4>
-          </div>
-        </div>
-      </section>
 
       <section className="xiir-benefits">
         <div className="container">
           <div className="div-head">
             <h3 className="ser-head-2">
-              {allContentfulTestDrive.nodes[0].subTitle}
+              {allContentfulTestDriveNew.nodes[0].subTitle}
             </h3>
           </div>
           <br />
           <div className="div-para">
-            <h4>{allContentfulTestDrive.nodes[0].subDescription}</h4>
+            <h4>{allContentfulTestDriveNew.nodes[0].subDescription}</h4>
           </div>
         </div>
       </section>
       <div className="text-center ser-img-2">
-        <img src={allContentfulTestDrive.nodes[0].image.file.url} alt="ser-2" />
+        <img src={allContentfulTestDriveNew.nodes[0].commingSoonImg.file.url} alt="ser-2" />
       </div>
       <section className="download-box section-padding">
         <div className="container">
           <div className="our-media">
-            <h1>{allContentfulTestDrive.nodes[0].subText}</h1>
+            <h3 className="ser-head-2">{allContentfulTestDriveNew.nodes[0].inputTitle}</h3>
           </div>
           <div className="box ">
             <div className=" datasheet-down">
               <form onSubmit={handleSubmit}>
                 <div className="input">
                   <input
-                    placeholder="your full name"
+                    placeholder="full name"
                     value={name}
                     type="text"
                     name="user_name"
@@ -170,7 +157,7 @@ const TestDrive = ({ data }) => {
                     onChange={e => setName(e.currentTarget.value)}
                   />
                   <input
-                    placeholder="please enter a valid business email"
+                    placeholder="email"
                     value={email}
                     type="email"
                     name="user_email"
@@ -198,24 +185,26 @@ export default TestDrive
 
 export const qurey = graphql`
   query {
-    allContentfulTestDrive {
+    allContentfulTestDriveNew {
       nodes {
         title
         subTitle
-        subText
         subDescription
-        description
-        imgPlanTwo {
+        descriptionOne
+        descriptionTwo
+      inputTitle
+      mainText
+        planTwo {
           file {
             url
           }
         }
-        imgPlanOne {
+        planOne {
           file {
             url
           }
         }
-        image {
+        commingSoonImg {
           file {
             url
           }
