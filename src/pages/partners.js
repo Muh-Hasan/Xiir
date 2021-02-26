@@ -14,7 +14,7 @@ const Partners = ({ data }) => {
   const {
     allContentfulContentArea,
     allContentfulContactPage,
-    allContentfulFrequentlyAskedQuestions,
+    allContentfulTogglesPartners,
   } = data
   const handleSubmit = e => {
     e.preventDefault()
@@ -146,17 +146,15 @@ const Partners = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {allContentfulFrequentlyAskedQuestions.nodes
-                    .slice(3)
-                    .map((v, i) => (
-                      <AccordionGreen
-                        title={v.title}
-                        content={documentToReactComponents(
-                          JSON.parse(v.description.raw)
-                        )}
-                        key={i}
-                      />
-                    ))}
+                  {allContentfulTogglesPartners.nodes.map((v, i) => (
+                    <AccordionGreen
+                      title={v.title}
+                      content={documentToReactComponents(
+                        JSON.parse(v.description.raw)
+                      )}
+                      key={i}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -207,7 +205,7 @@ export const qurey = graphql`
         textSideOne
       }
     }
-    allContentfulFrequentlyAskedQuestions {
+    allContentfulTogglesPartners {
       nodes {
         title
         description {
