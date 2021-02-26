@@ -59,7 +59,11 @@
 }
 
 .menu-header {
-  padding: 90px 0;
+  padding: 26px 0;
+}
+.main-menu {
+  padding-top: 110px;
+  padding-bottom: 110px;
 }
 .menu-close-triger .close-menu-triger {
   background: none;
@@ -132,7 +136,7 @@
 }
 .menu-footer-login {
   text-align: right;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .menu-footer-login h2 a {
   color: #fff !important;
@@ -150,8 +154,9 @@
   padding-top: 60px;
 }
 @media (max-width: 768px) {
-  .menu-header {
-    padding: 60px 0;
+  .main-menu {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .site-header .header-icon img {
     max-width: 60px;

@@ -54,11 +54,24 @@ const Footer = () => {
           }
           subTitle
           updates
+          txtTwo
+          txtThree
+          txtOne
+          txtFour
+        }
+      }
+      allContentfulHeader {
+        nodes {
+          btnFour
+          btnFive
+          btnOne
+          btnThree
+          btnTwo
         }
       }
     }
   `)
-  const { allContentfulFooter } = data
+  const { allContentfulFooter, allContentfulHeader } = data
   return (
     <footer className="footer-section">
       <div className="container">
@@ -81,27 +94,37 @@ const Footer = () => {
               <ul className="foot-menu">
                 <li>
                   <Link to="/testDrive">
-                    <button className="foot-btn">test drive</button>
+                    <button className="foot-btn">
+                      {allContentfulHeader.nodes[0].btnOne}
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/services">
-                    <button className="foot-btn">services</button>
+                    <button className="foot-btn">
+                      {allContentfulHeader.nodes[0].btnTwo}
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/partners">
-                    <button className="foot-btn">partners</button>
+                    <button className="foot-btn">
+                      {allContentfulHeader.nodes[0].btnThree}
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/blog">
-                    <button className="foot-btn">blog</button>
+                    <button className="foot-btn">
+                      {allContentfulHeader.nodes[0].btnFour}
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/contact">
-                    <button className="foot-btn">contact</button>
+                    <button className="foot-btn">
+                      {allContentfulHeader.nodes[0].btnFive}
+                    </button>
                   </Link>
                 </li>
               </ul>
@@ -152,22 +175,22 @@ const Footer = () => {
             <div className="social-media d-flex align-items-center justify-content-between pay">
               <li>
                 <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
-                  <p>Privacy</p>
+                  <p>{allContentfulFooter.nodes[0].txtOne}</p>
                 </a>
               </li>
               <li>
                 <a href="https://docs.google.com/uc?export=download&id=118Nvc-kQcwznRaQKVFjcDQGOLNqhc4cy">
-                  <p>Terms</p>
+                  <p>{allContentfulFooter.nodes[0].txtTwo}</p>
                 </a>
               </li>
               <li>
                 <Link to="/pay">
-                  <p>Pay </p>
+                  <p>{allContentfulFooter.nodes[0].txtThree}</p>
                 </Link>
               </li>
             </div>
             <li>
-              <p>© 2021 Xiir</p>
+              <p>{allContentfulFooter.nodes[0].txtFour}</p>
             </li>
           </div>
         </div>
