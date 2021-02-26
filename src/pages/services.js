@@ -8,7 +8,7 @@ import Button from "../components/Button"
 import Content from "../components/Content"
 const Services = ({ data }) => {
   const {
-    allContentfulFrequentlyAskedQuestions,
+    allContentfulTogglesServices,
     allContentfulServices,
     allContentfulContentArea,
   } = data
@@ -36,12 +36,14 @@ const Services = ({ data }) => {
                 src={allContentfulServices.nodes[0].image.file.url}
                 alt="ser-1"
               />
+              <div className='ser-padding-btn'>
               <Link to="/testDrive">
                 <Button
                   text="get an instant test drive"
                   className="btn-purple"
                 />
               </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -64,8 +66,7 @@ const Services = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {allContentfulFrequentlyAskedQuestions.nodes
-                    .slice(3)
+                  {allContentfulTogglesServices.nodes
                     .map((v, i) => (
                       <AccordionGreen
                         title={v.title}
@@ -106,13 +107,13 @@ const Services = ({ data }) => {
         </div>
       </section>
 
-      <div className="text-center ser-img-2">
+      <div className="text-center ser-img-2 container">
         <img
           src={allContentfulServices.nodes[0].imagePlan.file.url}
           alt="ser-2"
         />
       </div>
-      <div className="container ser-padding-btn">
+      <div className="container ser-padding-btn text-center">
         <Link to="/contact">
           <Button text="let's arrange a demo" className="btn-purple" />
         </Link>
@@ -126,14 +127,14 @@ export default Services
 
 export const qurey = graphql`
   query {
-    allContentfulFrequentlyAskedQuestions {
-      nodes {
-        title
-        description {
-          raw
-        }
+    allContentfulTogglesServices {
+    nodes {
+      description {
+        raw
       }
+      title
     }
+  }
     allContentfulContentArea {
       nodes {
         textMainHeading
