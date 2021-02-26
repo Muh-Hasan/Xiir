@@ -39,7 +39,7 @@ const AllBlogs = ({ location }) => {
                 {allContentfulAllBlogs.nodes[0].title}
               </h3>
               <div style={{ marginBottom: "20px" }}>
-                <h2>{allContentfulAllBlogs.nodes[0].description}</h2>
+                <h2 style={{color: "#243671"}}>{allContentfulAllBlogs.nodes[0].description}</h2>
               </div>
             </div>
           </div>
