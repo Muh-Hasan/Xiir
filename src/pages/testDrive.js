@@ -12,7 +12,7 @@ const TestDrive = ({ data }) => {
   const [name, setName] = useState("")
   const {
     allContentfulTestDriveNew,
-    allContentfulFrequentlyAskedQuestions,
+    allContentfulTogglesTestDrivePage,
     allContentfulContentArea,
   } = data
   const handleSubmit = e => {
@@ -20,7 +20,7 @@ const TestDrive = ({ data }) => {
     emailjs
       .sendForm(
         "service_qkbep48",
-        "template_vo1uex8",
+        "template_wl24ize",
         e.target,
         "user_H1giHzeT00K7WW4tInQOn"
       )
@@ -117,8 +117,7 @@ const TestDrive = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {allContentfulFrequentlyAskedQuestions.nodes
-                    .slice(3)
+                  {allContentfulTogglesTestDrivePage.nodes
                     .map((v, i) => (
                       <AccordionGreen
                         title={v.title}
@@ -239,7 +238,7 @@ export const qurey = graphql`
         textSideOne
       }
     }
-    allContentfulFrequentlyAskedQuestions {
+    allContentfulTogglesTestDrivePage {
       nodes {
         title
         description {
