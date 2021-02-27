@@ -117,16 +117,15 @@ const TestDrive = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {allContentfulTogglesTestDrivePage.nodes
-                    .map((v, i) => (
-                      <AccordionGreen
-                        title={v.title}
-                        content={documentToReactComponents(
-                          JSON.parse(v.description.raw)
-                        )}
-                        key={i}
-                      />
-                    ))}
+                  {allContentfulTogglesTestDrivePage.nodes.map((v, i) => (
+                    <AccordionGreen
+                      title={v.title}
+                      content={documentToReactComponents(
+                        JSON.parse(v.description.raw)
+                      )}
+                      key={i}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

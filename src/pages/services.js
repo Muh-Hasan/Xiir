@@ -36,13 +36,13 @@ const Services = ({ data }) => {
                 src={allContentfulServices.nodes[0].image.file.url}
                 alt="ser-1"
               />
-              <div className='ser-padding-btn'>
-              <Link to="/testDrive">
-                <Button
-                  text="get an instant test drive"
-                  className="btn-purple"
-                />
-              </Link>
+              <div className="ser-padding-btn">
+                <Link to="/testDrive">
+                  <Button
+                    text="get an instant test drive"
+                    className="btn-purple"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -66,16 +66,15 @@ const Services = ({ data }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
-                  {allContentfulTogglesServices.nodes
-                    .map((v, i) => (
-                      <AccordionGreen
-                        title={v.title}
-                        content={documentToReactComponents(
-                          JSON.parse(v.description.raw)
-                        )}
-                        key={i}
-                      />
-                    ))}
+                  {allContentfulTogglesServices.nodes.map((v, i) => (
+                    <AccordionGreen
+                      title={v.title}
+                      content={documentToReactComponents(
+                        JSON.parse(v.description.raw)
+                      )}
+                      key={i}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -128,13 +127,13 @@ export default Services
 export const qurey = graphql`
   query {
     allContentfulTogglesServices {
-    nodes {
-      description {
-        raw
+      nodes {
+        description {
+          raw
+        }
+        title
       }
-      title
     }
-  }
     allContentfulContentArea {
       nodes {
         textMainHeading
