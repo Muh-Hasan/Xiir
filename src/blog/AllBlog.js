@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Card from "../components/Card"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
 
 const AllBlogs = ({ location }) => {
+  const [filterData, setFilterData] = useState([])
+  const [optionVal, setOptionVal] = useState("All")
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlog {
@@ -27,7 +29,20 @@ const AllBlogs = ({ location }) => {
     }
   `)
   const { allContentfulBlog, allContentfulAllBlogs } = data
-
+  useEffect(() => {
+    if (optionVal === "All") {
+      setFilterData(allContentfulBlog.nodes)
+    } else if (optionVal === "Blogs") {
+      setFilterData(
+        allContentfulBlog.nodes.filter(
+          v => v.title === "Xiir exhibits at Collision 2020 Conference "
+        )
+      )
+    }
+  }, [optionVal])
+  console.log(filterData)
+  // 3/20/1972
+  // I  have withdrawn payment from the payoneer to the local bank. On the dashboard, it said the payment is completed but I haven't received it on my bank
   return (
     <div>
       <Header />
@@ -44,11 +59,14 @@ const AllBlogs = ({ location }) => {
                 </h2>
               </div>
             </div>
+            <button onClick={() => setOptionVal("All")}>All</button>
+            <button onClick={() => setOptionVal("News")}>News</button>
+            <button onClick={() => setOptionVal("Blogs")}>Blogs</button>
           </div>
         </div>
         <div className="container">
           <div className="row justify-content-center container">
-            {allContentfulBlog.nodes.map((v, i) => (
+            {filterData?.map((v, i) => (
               <Link to={`/blog/${i}`} key={i}>
                 <Card
                   img={v.img.file.url}
