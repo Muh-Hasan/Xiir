@@ -59,6 +59,9 @@ const AllBlogs = ({ location }) => {
                 </h2>
               </div>
             </div>
+
+
+            
             <button onClick={() => setOptionVal("All")}>All</button>
             <button onClick={() => setOptionVal("News")}>News</button>
             <button onClick={() => setOptionVal("Blogs")}>Blogs</button>
