@@ -41,8 +41,7 @@ const AllBlogs = ({ location }) => {
     }
   }, [optionVal])
   console.log(filterData)
-  // 3/20/1972
-  // I  have withdrawn payment from the payoneer to the local bank. On the dashboard, it said the payment is completed but I haven't received it on my bank
+ 
   return (
     <div>
       <Header />
